@@ -1202,6 +1202,459 @@ pipeline_artifacts:
       test_id: TC-002
       title: Verify loan officer can access unified LMS with all loan product types
         and appropriate role-based permissions
+  - aborted: false
+    completed_at: '2026-06-18T12:12:32.660446+00:00'
+    defects:
+    - created_at: '2026-06-18T12:12:32.660467+00:00'
+      defect_id: DEF-002
+      error: Test failed - Classic Email Templates and Process Builder are not available
+        in this org. The test steps require creating email templates using the Classic
+        Email Template feature and Process Builder for automated triggers, but these
+        features are not accessible through the Lightning Setup interface in this
+        Developer Edition org. Modern alternatives like Notification Builder and Flow
+        Builder may be available, but the test script specifically requires the classic
+        functionality.
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-08
+      persona: Default
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-002-failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-002
+      title: Configure and test notification capabilities with email templates, automated
+        triggers, and delivery tracking
+    executed_by: Test Execution Agent — ankitkumarvkp@gmail.com.dev
+    execution_id: EXEC-d94490e9
+    org_url: https://login.salesforce.com
+    started_at: '2026-06-18T12:07:03.324721+00:00'
+    summary:
+      failed: 1
+      pass_rate: 0%
+      passed: 0
+      skipped: 0
+      total: 1
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 317.5
+      executor: mcp
+      failure_detail: Test failed - Classic Email Templates and Process Builder are
+        not available in this org. The test steps require creating email templates
+        using the Classic Email Template feature and Process Builder for automated
+        triggers, but these features are not accessible through the Lightning Setup
+        interface in this Developer Edition org. Modern alternatives like Notification
+        Builder and Flow Builder may be available, but the test script specifically
+        requires the classic functionality.
+      linked_story: US-08
+      persona: Default
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-002-failure.png
+      status: failed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <input name='searchInFeed'\
+          \ type='search'> 'Search this feed...'\n  e2: <a> "
+        elapsed_seconds: 8.3
+        purpose: Click the Setup gear icon in the top-right corner
+        status: passed
+        step: 1
+        target: e8
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <input name='searchInFeed'\
+          \ type='search'> 'Search this feed...'\n  e2: <a> "
+        elapsed_seconds: 12.0
+        purpose: Click Setup from the dropdown menu
+        status: passed
+        step: 2
+        target: e11
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <input name='searchInFeed'\
+          \ type='search'> 'Search this feed...'\n  e2: <a> "
+        elapsed_seconds: 20.1
+        purpose: Click Setup button to navigate to Setup
+        status: passed
+        step: 3
+        target: e9
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <input name='searchInFeed'\
+          \ type='search'> 'Search this feed...'\n  e2: <a> "
+        elapsed_seconds: 24.8
+        purpose: Click Setup menuitem to navigate to Setup home page
+        status: passed
+        step: 4
+        target: e11
+      - action: navigate
+        detail: 'Navigated to https://anku2044-dev-ed.lightning.force.com/lightning/setup/SetupOneHome/home
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home
+
+          page_title: Home | Salesforce
+
+          el'
+        elapsed_seconds: 30.6
+        purpose: Navigate directly to Setup home page
+        status: passed
+        step: 5
+        target: /lightning/setup/SetupOneHome/home
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Content"
+        elapsed_seconds: 35.6
+        purpose: Click on Email section to expand and find email templates
+        status: passed
+        step: 6
+        target: e27
+      - action: fill
+        detail: "Typed 15 characters successfully\n\n--- Fresh page snapshot (taken\
+          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to "
+        elapsed_seconds: 41.0
+        purpose: Search for Email Templates in Quick Find
+        status: passed
+        step: 7
+        target: e14
+      - action: press_key
+        detail: Pressed 'Enter' successfully
+        elapsed_seconds: 45.2
+        purpose: Press Enter to search for Email Templates
+        status: passed
+        step: 8
+        target: ''
+      - action: navigate
+        detail: 'Navigated to https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/CommunicationTemplatesEmail/home
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/CommunicationTemplatesEmail/hom'
+        elapsed_seconds: 54.7
+        purpose: Navigate directly to Email Templates page
+        status: passed
+        step: 9
+        target: /lightning/setup/CommunicationTemplatesEmail/home
+      - action: navigate
+        detail: 'Navigated to https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/CommunicationTemplatesEmails/home
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/CommunicationTemplatesEmails/h'
+        elapsed_seconds: 60.4
+        purpose: Navigate to Classic Email Templates page
+        status: passed
+        step: 10
+        target: /lightning/setup/CommunicationTemplatesEmails/home
+      - action: fill
+        detail: "Typed 23 characters successfully\n\n--- Fresh page snapshot (taken\
+          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/CommunicationTemplatesEmails/home\n\
+          page_title: Page not found | Salesforce\nelements:\n  e1: <a> 'Skip to Navig"
+        elapsed_seconds: 65.3
+        purpose: Search for Classic Email Templates
+        status: passed
+        step: 11
+        target: e3
+      - action: click
+        detail: 'Clicked successfully
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/one/one.app#eyJjb21wb25lbnREZWYiOiJmb3JjZVNlYXJjaDpzZWFyY2giLCJhdHRyaWJ1dGVzIjp7InRlcm0iOiJDbGFzc2ljIEVtYWlsIFRlbXBsYXRlcyIsInNjb3BlTWFw'
+        elapsed_seconds: 70.0
+        purpose: Click on the search suggestion for Classic Email Templates
+        status: passed
+        step: 12
+        target: e4
+      - action: fill
+        detail: 'Typed 15 characters successfully
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/one/one.app#eyJjb21wb25lbnREZWYiOiJmb3JjZVNlYXJjaDpzZWFyY2giLCJhdHRyaWJ1dGVzIjp7InRlcm0iOiJDbGFzc2ljIEVtYWlsIFRlbXBsYXRlcyIs'
+        elapsed_seconds: 74.4
+        purpose: Search for Email Templates in Quick Find
+        status: passed
+        step: 13
+        target: e14
+      - action: press_key
+        detail: Pressed 'Enter' successfully
+        elapsed_seconds: 88.0
+        purpose: Press Enter to search for Email Templates
+        status: passed
+        step: 14
+        target: ''
+      - action: navigate
+        detail: "Navigated to https://anku2044-dev-ed.my.salesforce-setup.com/setup/comm/EmailTemplateList.apexp\n\
+          \n--- Fresh page snapshot (taken automatically because the page may have\
+          \ changed) ---\npage_url: https://anku2044-dev-ed.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1:"
+        elapsed_seconds: 97.8
+        purpose: Navigate directly to Classic Email Templates list page
+        status: passed
+        step: 15
+        target: /setup/comm/EmailTemplateList.apexp
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element did not become interactable in time)
+        elapsed_seconds: 109.8
+        purpose: Click App Launcher to find Email Templates
+        status: failed
+        step: 16
+        target: e16
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element did not become interactable in time)
+        elapsed_seconds: 126.8
+        purpose: Click App Launcher to find Email Templates
+        status: failed
+        step: 17
+        target: e26
+      - action: click_by_selector
+        detail: click_by_selector('button[title="App Launcher"]') failed — Element
+          did not become interactable in time
+        elapsed_seconds: 143.6
+        purpose: Click App Launcher button
+        status: failed
+        step: 18
+        target: ''
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element did not become interactable in time)
+        elapsed_seconds: 156.6
+        purpose: Click Setup button
+        status: failed
+        step: 19
+        target: e9
+      - action: navigate
+        detail: 'Navigated to https://anku2044-dev-ed.lightning.force.com/lightning/setup/SetupOneHome/home
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home
+
+          page_title: Home | Salesforce
+
+          el'
+        elapsed_seconds: 166.8
+        purpose: Navigate to Setup to find Email Templates
+        status: passed
+        step: 20
+        target: /lightning/setup/SetupOneHome/home
+      - action: fill
+        detail: "Typed 7 characters successfully\n\n--- Fresh page snapshot (taken\
+          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to M"
+        elapsed_seconds: 173.1
+        purpose: Search for Classic in Quick Find to find Classic Email Templates
+        status: passed
+        step: 21
+        target: e13
+      - action: press_key
+        detail: Pressed 'Enter' successfully
+        elapsed_seconds: 179.6
+        purpose: Press Enter to search for Classic
+        status: passed
+        step: 22
+        target: ''
+      - action: navigate
+        detail: "Navigated to https://anku2044-dev-ed.my.salesforce-setup.com/email/admin/editHtmlTemplate.apexp\n\
+          \n--- Fresh page snapshot (taken automatically because the page may have\
+          \ changed) ---\npage_url: https://anku2044-dev-ed.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1:"
+        elapsed_seconds: 190.0
+        purpose: Navigate directly to Classic Email Template creation page
+        status: passed
+        step: 23
+        target: /email/admin/editHtmlTemplate.apexp
+      - action: navigate
+        detail: 'Navigated to https://anku2044-dev-ed.lightning.force.com/lightning/setup/SetupOneHome/home
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home
+
+          page_title: Home | Salesforce
+
+          el'
+        elapsed_seconds: 197.6
+        purpose: Navigate back to Setup to find Process Automation
+        status: passed
+        step: 24
+        target: /lightning/setup/SetupOneHome/home
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Content"
+        elapsed_seconds: 203.0
+        purpose: Toggle Panel to show the Setup sidebar
+        status: passed
+        step: 25
+        target: e20
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element did not become interactable in time)
+        elapsed_seconds: 216.2
+        purpose: Expand Email section to find email templates
+        status: failed
+        step: 26
+        target: e27
+      - action: click
+        detail: the click did not land — the element likely re-rendered or is not
+          visible yet. Take a FRESH snapshot and click it again by its current ref
+          / visible label. (Element did not become interactable in time)
+        elapsed_seconds: 233.8
+        purpose: Click on Notification Builder to create notification templates
+        status: failed
+        step: 27
+        target: e59
+      - action: click_by_selector
+        detail: click_by_selector('a:has-text("Notification Builder")') failed — Element
+          did not become interactable in time
+        elapsed_seconds: 250.0
+        purpose: Click on Notification Builder
+        status: failed
+        step: 28
+        target: ''
+      - action: navigate
+        detail: 'Navigated to https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/NotificationBuilder/home
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/NotificationBuilder/home
+
+          page_title: Li'
+        elapsed_seconds: 257.3
+        purpose: Navigate directly to Notification Builder
+        status: passed
+        step: 29
+        target: /lightning/setup/NotificationBuilder/home
+      - action: navigate
+        detail: 'Navigated to https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/ProcessAutomation/home
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/ProcessAutomation/home
+
+          page_title: Lightn'
+        elapsed_seconds: 264.5
+        purpose: Navigate to Process Automation section to find Process Builder
+        status: passed
+        step: 30
+        target: /lightning/setup/ProcessAutomation/home
+      - action: navigate
+        detail: 'Navigated to https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home
+
+          page_title: Home | Salesforc'
+        elapsed_seconds: 271.1
+        purpose: Navigate back to Setup home to use Quick Find
+        status: passed
+        step: 31
+        target: /lightning/setup/SetupOneHome/home
+      - action: fill
+        detail: "Typed 15 characters successfully\n\n--- Fresh page snapshot (taken\
+          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to "
+        elapsed_seconds: 276.4
+        purpose: Search for Process Builder in Quick Find as specified in step 10
+        status: passed
+        step: 32
+        target: e13
+      - action: press_key
+        detail: Pressed 'Enter' successfully
+        elapsed_seconds: 281.8
+        purpose: Press Enter to search for Process Builder
+        status: passed
+        step: 33
+        target: ''
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/SetupOneHome/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <a> 'Skip to Navigation'\n\
+          \  e2: <a> 'Skip to Main Content"
+        elapsed_seconds: 291.0
+        purpose: Click on Process Builder to navigate to the Process Builder page
+        status: passed
+        step: 34
+        target: e17
+      - action: wait_for_selector
+        detail: '''button:has-text("New")'' did not appear within 5000ms. If the page
+          already shows what you need, proceed to the next step — the action tools
+          auto-wait; do not keep waiting.'
+        elapsed_seconds: 301.3
+        purpose: Wait for Process Builder page to load with New button
+        status: failed
+        step: 35
+        target: ''
+      - action: navigate
+        detail: 'Navigated to https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/ProcessBuilder/home
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.my.salesforce-setup.com/lightning/setup/ProcessBuilder/home
+
+          page_title: Lightning Ex'
+        elapsed_seconds: 309.1
+        purpose: Navigate directly to Process Builder page
+        status: passed
+        step: 36
+        target: /lightning/setup/ProcessBuilder/home
+      steps_executed: 36
+      steps_passed: 28
+      summary: Test failed - Classic Email Templates and Process Builder are not available
+        in this org. The test steps require creating email templates using the Classic
+        Email Template feature and Process Builder for automated triggers, but these
+        features are not accessible through the Lightning Setup interface in this
+        Developer Edition org. Modern alternatives like Notification Builder and Flow
+        Builder may be available, but the test script specifically requires the classic
+        functionality.
+      test_id: TC-002
+      title: Configure and test notification capabilities with email templates, automated
+        triggers, and delivery tracking
   test_scripts:
     estimated_total_duration_minutes: 25
     generated_at: '2026-06-18T12:02:51.783835+00:00'
@@ -1973,4 +2426,4 @@ pipeline_artifacts:
     test_suite: Notification Capabilities Test Suite
     total_tests: 2
 schema_version: 1
-updated_at: '2026-06-18T12:06:52.564678+00:00'
+updated_at: '2026-06-18T12:12:32.709234+00:00'
