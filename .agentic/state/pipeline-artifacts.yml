@@ -785,6 +785,184 @@ pipeline_artifacts:
       title: As the delivery team, I want to Define integration plan during Design
         phase
       type: story
+  test_executions:
+  - aborted: false
+    completed_at: '2026-06-18T10:27:24.224304+00:00'
+    defects:
+    - created_at: '2026-06-18T10:27:24.224367+00:00'
+      defect_id: DEF-001
+      error: 'Stopped after 2 consecutive failed attempts. Last issue: ''Loan Product
+        Type'' was not visible on the page after waiting. If this is a final assertion,
+        take a fresh snapshot to re-check or call finish — do NOT click or navigate
+        to hunt for it.'
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-01
+      persona: Default
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-001
+      title: Verify loan officer can access unified LMS with all loan product types
+        and appropriate role-based permissions
+    executed_by: Test Execution Agent — ankitkumarvkp@gmail.com.dev
+    execution_id: EXEC-ea5fcf0d
+    org_url: https://login.salesforce.com
+    started_at: '2026-06-18T10:25:50.978223+00:00'
+    summary:
+      failed: 1
+      pass_rate: 0%
+      passed: 0
+      skipped: 0
+      total: 1
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 82.5
+      executor: mcp
+      failure_detail: 'Stopped after 2 consecutive failed attempts. Last issue: ''Loan
+        Product Type'' was not visible on the page after waiting. If this is a final
+        assertion, take a fresh snapshot to re-check or call finish — do NOT click
+        or navigate to hunt for it.'
+      linked_story: US-01
+      persona: Default
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
+      status: failed
+      step_results:
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.lightning.force.com/lightning/page/home\n\
+          page_title: Home | Salesforce\nelements:\n  e1: <input name='searchInFeed'\
+          \ type='search'> 'Search this feed...'\n  e2: <a> "
+        elapsed_seconds: 8.6
+        purpose: Click the 9-dot App Launcher icon
+        status: passed
+        step: 1
+        target: e22
+      - action: wait_for_selector
+        detail: Element matching 'div[class*="appLauncher"]' became visible
+        elapsed_seconds: 12.1
+        purpose: Wait for App Launcher modal to open
+        status: passed
+        step: 2
+        target: ''
+      - action: press_key
+        detail: Pressed 'Escape' successfully
+        elapsed_seconds: 18.9
+        purpose: Close the App Launcher modal
+        status: passed
+        step: 3
+        target: ''
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.lightning.force.com/lightning/o/Lead/list?filterName=__Recent\n\
+          page_title: Recently Viewed | Leads | Salesforce\nelements:\n  e1: <a> 'Skip\
+          \ to Navigation'\n  e2: <a"
+        elapsed_seconds: 22.5
+        purpose: Click on the Leads tab to access lead management interface
+        status: passed
+        step: 4
+        target: e29
+      - action: verify_text
+        detail: '''Loan Product Type'' was not visible on the page after waiting.
+          If this is a final assertion, take a fresh snapshot to re-check or call
+          finish — do NOT click or navigate to hunt for it.'
+        elapsed_seconds: 34.1
+        purpose: Loan Product Type
+        status: failed
+        step: 5
+        target: Loan Product Type
+      - action: click_by_selector
+        detail: no visible element matches 'button[name="New"]'. The hint may be wrong
+          for this org — take a fresh snapshot and click the element by its visible
+          label/ref instead.
+        elapsed_seconds: 38.8
+        purpose: Click the New button to create a new lead
+        status: failed
+        step: 6
+        target: ''
+      - action: click
+        detail: 'Clicked successfully
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.lightning.force.com/lightning/o/Lead/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=178177840424251879&backgroundContext=%2Fligh'
+        elapsed_seconds: 43.8
+        purpose: Click the New button to create a new lead
+        status: passed
+        step: 7
+        target: e30
+      - action: wait_for_selector
+        detail: Element matching 'input[placeholder="Last Name"]' became visible
+        elapsed_seconds: 48.2
+        purpose: Wait for the New Lead modal form to load
+        status: passed
+        step: 8
+        target: ''
+      - action: wait_for_selector
+        detail: skipped waiting on the structural selector 'form' — the action tools
+          already auto-wait, so this wait is unnecessary. Proceed directly to the
+          next step (click/fill by visible label); do not invent wait_for_selector
+          steps.
+        elapsed_seconds: 55.1
+        purpose: Wait for the lead creation form to be visible
+        status: failed
+        step: 9
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 8 characters into ''input[placeholder="Last Name"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.lightning.force.com/lightning/o/Lead/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=17817784'
+        elapsed_seconds: 59.1
+        purpose: Fill in the Last Name field with TestLead
+        status: passed
+        step: 10
+        target: ''
+      - action: fill_by_selector
+        detail: 'Typed 12 characters into ''input[name="Company"]''
+
+
+          --- Fresh page snapshot (taken automatically because the page may have changed)
+          ---
+
+          page_url: https://anku2044-dev-ed.lightning.force.com/lightning/o/Lead/new?count=1&nooverride=1&useRecordTypeCheck=1&navigationLocation=LIST_VIEW&uid=1781778404242518'
+        elapsed_seconds: 63.7
+        purpose: Fill in the Company field with Test Company
+        status: passed
+        step: 11
+        target: ''
+      - action: select_picklist
+        detail: select_picklist('button[role="combobox"][aria-label="Loan Product
+          Type"]') failed — Action timed out
+        elapsed_seconds: 71.2
+        purpose: Open the Loan Product Type picklist and select Mortgage to verify
+          all loan product options are available
+        status: failed
+        step: 12
+        target: ''
+      - action: verify_text
+        detail: '''Loan Product Type'' was not visible on the page after waiting.
+          If this is a final assertion, take a fresh snapshot to re-check or call
+          finish — do NOT click or navigate to hunt for it.'
+        elapsed_seconds: 82.4
+        purpose: Loan Product Type
+        status: failed
+        step: 13
+        target: Loan Product Type
+      steps_executed: 13
+      steps_passed: 8
+      summary: null
+      test_id: TC-001
+      title: Verify loan officer can access unified LMS with all loan product types
+        and appropriate role-based permissions
   test_scripts:
     estimated_total_duration_minutes: 8
     generated_at: '2026-06-18T10:23:22.359865+00:00'
@@ -881,4 +1059,4 @@ pipeline_artifacts:
     test_suite: LMS Unified Interface Access Testing
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-18T10:23:22.421017+00:00'
+updated_at: '2026-06-18T10:27:24.312488+00:00'
