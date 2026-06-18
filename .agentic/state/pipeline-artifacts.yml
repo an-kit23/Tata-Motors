@@ -799,10 +799,10 @@ pipeline_artifacts:
       jira_pushed_at: ''
       linked_story: US-01
       persona: Default
-      resolved_at: ''
+      resolved_at: '2026-06-18T10:43:13.227255+00:00'
       screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-001-failure.png
       severity: Medium
-      status: open
+      status: closed
       story_title: ''
       test_id: TC-001
       title: Verify loan officer can access unified LMS with all loan product types
@@ -1411,4 +1411,4 @@ pipeline_artifacts:
     test_suite: LMS Unified Interface Access Testing
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-18T10:37:15.379577+00:00'
+updated_at: '2026-06-18T10:43:13.291749+00:00'
