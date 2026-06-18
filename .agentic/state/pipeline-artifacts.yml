@@ -1321,6 +1321,8 @@ pipeline_artifacts:
             can manage leads across all business segments efficiently
         summary: delete s7
         via: chat
+      edited_at: '2026-06-18T10:36:25.486321+00:00'
+      edited_by: ankit.kumar5@salesforce.com
       estimated_duration_minutes: 8
       generated_at: '2026-06-18T10:23:22.360032+00:00'
       linked_story: US-01
@@ -1338,6 +1340,7 @@ pipeline_artifacts:
         user_profile: Loan Officer
       steps:
       - action: click
+        data: ''
         detail: Click the 9-dot App Launcher icon in the top-left corner of the Lightning
           header
         expected: App Launcher modal opens showing available apps and items
@@ -1345,12 +1348,14 @@ pipeline_artifacts:
         step_id: s1
         target: App Launcher
       - action: click
+        data: ''
         detail: Click on the Leads tab to access the lead management interface
         expected: Leads list view opens showing all accessible lead records
         step: 2
         step_id: s2
         target: Leads tab
       - action: verify
+        data: ''
         detail: Verify that leads with different loan product types are visible in
           the list
         expected: Lead records with various loan product types (Mortgage, Auto, Personal)
@@ -1359,6 +1364,7 @@ pipeline_artifacts:
         step_id: s3
         target: ''
       - action: click
+        data: ''
         detail: Click the New button to create a new lead and verify access to all
           loan product options
         expected: New Lead modal opens with the lead creation form
@@ -1380,6 +1386,7 @@ pipeline_artifacts:
         step_id: s6
         target: Company field (input[name="Company"])
       - action: click
+        data: ''
         detail: Click Save to create the lead record
         expected: Lead record is saved and success toast shows 'Lead "TestLead" was
           created.'
@@ -1387,10 +1394,11 @@ pipeline_artifacts:
         step_id: s8
         target: Save button (button[name="SaveEdit"])
       - action: verify
+        data: ''
         detail: Verify the lead detail page displays with unified interface elements
           for lead management
-        expected: Lead detail page opens showing the created lead with Loan Product
-          Type field populated and standard lead management interface
+        expected: Lead detail page opens showing the created lead with Loan standard
+          lead management interface
         step: 8
         step_id: s9
         target: ''
@@ -1403,4 +1411,4 @@ pipeline_artifacts:
     test_suite: LMS Unified Interface Access Testing
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-18T10:35:16.761131+00:00'
+updated_at: '2026-06-18T10:36:25.538479+00:00'
