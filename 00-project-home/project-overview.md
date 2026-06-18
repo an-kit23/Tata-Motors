@@ -18,9 +18,8 @@ _Created: 2026-06-18T08:23:06.182650+00:00_
 | build | 1 |
 | change | 1 |
 | design | 1 |
-| discovery | 1 |
 | home | 1 |
 
 
 ---
-_Auto-generated from in-app state. Source field: `project_name + extracted_profile + tab_badges`. Last updated: 2026-06-18T10:10:32.677771+00:00._
+_Auto-generated from in-app state. Source field: `project_name + extracted_profile + tab_badges`. Last updated: 2026-06-18T10:23:22.441568+00:00._
