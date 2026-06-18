@@ -997,11 +997,13 @@ pipeline_artifacts:
           header
         expected: App Launcher modal opens showing available apps and items
         step: 1
+        step_id: s1
         target: App Launcher
       - action: click
         detail: Click on the Leads tab to access the lead management interface
         expected: Leads list view opens showing all accessible lead records
         step: 2
+        step_id: s2
         target: Leads tab
       - action: verify
         detail: Verify that leads with different loan product types are visible in
@@ -1009,24 +1011,28 @@ pipeline_artifacts:
         expected: Lead records with various loan product types (Mortgage, Auto, Personal)
           are displayed in the list view
         step: 3
+        step_id: s3
         target: ''
       - action: click
         detail: Click the New button to create a new lead and verify access to all
           loan product options
         expected: New Lead modal opens with the lead creation form
         step: 4
+        step_id: s4
         target: New button (button[name="New"])
       - action: fill
         data: TestLead
         detail: Fill in the Last Name field with a test value
         expected: Last Name field displays 'TestLead'
         step: 5
+        step_id: s5
         target: Last Name field (input[placeholder="Last Name"])
       - action: fill
         data: Test Company
         detail: Fill in the Company field with a test company name
         expected: Company field displays 'Test Company'
         step: 6
+        step_id: s6
         target: Company field (input[name="Company"])
       - action: select_picklist
         detail: Open the Loan Product Type picklist to verify all loan product options
@@ -1034,6 +1040,7 @@ pipeline_artifacts:
         expected: 'Loan Product Type dropdown opens showing all available options:
           Mortgage, Auto Loan, Personal Loan, Business Loan'
         step: 7
+        step_id: s7
         target: Loan Product Type picklist (button[role="combobox"][aria-label="Loan
           Product Type"])
         value: Mortgage
@@ -1042,6 +1049,7 @@ pipeline_artifacts:
         expected: Lead record is saved and success toast shows 'Lead "TestLead" was
           created.'
         step: 8
+        step_id: s8
         target: Save button (button[name="SaveEdit"])
       - action: verify
         detail: Verify the lead detail page displays with unified interface elements
@@ -1049,6 +1057,7 @@ pipeline_artifacts:
         expected: Lead detail page opens showing the created lead with Loan Product
           Type field populated and standard lead management interface
         step: 9
+        step_id: s9
         target: ''
       story_snapshot: 614905f1bba98f92
       test_id: TC-001
@@ -1059,4 +1068,4 @@ pipeline_artifacts:
     test_suite: LMS Unified Interface Access Testing
     total_tests: 1
 schema_version: 1
-updated_at: '2026-06-18T10:27:24.312488+00:00'
+updated_at: '2026-06-18T10:30:09.041202+00:00'
