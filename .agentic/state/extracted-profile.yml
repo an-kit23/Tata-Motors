@@ -1,3 +1,1157 @@
-extracted_profile: null
+extracted_profile:
+  actions_customer:
+  - action: Provide API specifications before design phase start
+    owner: Customer IT Team
+    priority: high
+    status: pending
+  - action: Ensure production ready APIs before build phase of each release
+    owner: Customer IT Team
+    priority: high
+    status: pending
+  - action: Sign off finalized Business Process flows before design phase
+    owner: Product Owner
+    priority: high
+    status: pending
+  - action: Identify and align single Product Owner for requirements sign-off
+    owner: Customer Management
+    priority: high
+    status: pending
+  - action: Identify SPOCs for Change Management, training, integrations, IT Infrastructure
+    owner: Customer Management
+    priority: high
+    status: pending
+  - action: Provide master data in specified formats before build phase
+    owner: Customer Data Team
+    priority: high
+    status: pending
+  - action: Complete Infrastructure and Integration setup as required
+    owner: Customer IT Team
+    priority: high
+    status: pending
+  - action: Complete SIT and UAT within scheduled timeframes
+    owner: Customer Testing Team
+    priority: high
+    status: pending
+  - action: Provide field lists per stage and persona combination
+    owner: Business Teams
+    priority: med
+    status: pending
+  - action: Define notification content for SMS/Email templates
+    owner: Business Teams
+    priority: med
+    status: pending
+  - action: Ensure third-party vendor availability during development and testing
+    owner: Customer IT Team
+    priority: med
+    status: pending
+  - action: Obtain necessary third-party product licenses (JIRA, Middleware, ETL)
+    owner: Customer Procurement
+    priority: med
+    status: pending
+  - action: Apply data security procedures for production environment access
+    owner: Customer Security Team
+    priority: high
+    status: pending
+  actions_ps:
+  - action: Configure Core Salesforce Platform (Sales Cloud) for LMS and QDE
+    owner: SFDC Development Team
+    priority: high
+    status: pending
+  - action: Implement 170 integration touchpoints across 69 systems
+    owner: SFDC Integration Team
+    priority: high
+    status: pending
+  - action: Develop custom code and standard configurations for all business segments
+    owner: SFDC Development Team
+    priority: high
+    status: pending
+  - action: Implement STP process for pre-approved offers
+    owner: SFDC Development Team
+    priority: high
+    status: pending
+  - action: Configure CSV-based data upload functionality
+    owner: SFDC Development Team
+    priority: med
+    status: pending
+  - action: Conduct Discovery and Design phases for each release
+    owner: SFDC Business Analyst
+    priority: high
+    status: pending
+  - action: Set up and configure all environments during implementation
+    owner: SFDC Technical Team
+    priority: high
+    status: pending
+  - action: Provide project management using JIRA for tracking
+    owner: SFDC Project Manager
+    priority: med
+    status: pending
+  - action: Schedule and conduct workshops with business teams
+    owner: SFDC Project Manager
+    priority: med
+    status: pending
+  - action: Define integration plan during Design phase
+    owner: SFDC Integration Architect
+    priority: high
+    status: pending
+  - action: Deliver consultation-based additional services
+    owner: SFDC Subject Matter Experts
+    priority: med
+    status: pending
+  - action: Execute change control process for scope changes
+    owner: SFDC Project Manager
+    priority: med
+    status: pending
+  client_name: ADITYA BIRLA CAPITAL LIMITED
+  data_sources_needed:
+  - API specifications and documentation
+  - Sample request and response data
+  - Business Process Flow documents
+  - Field Lists per stage and persona combination
+  - Document collection requirements for QDE process
+  - Notification content templates
+  - Integration mapping details
+  - Master data structures and sample data
+  - User story requirements
+  - Test data for integration testing
+  dependencies:
+  - description: API specifications for consumed APIs before design phase start
+    id: DEP-01
+    owner: Customer
+    status: pending
+  - description: Production ready APIs before build phase of each release
+    id: DEP-02
+    owner: Customer
+    status: pending
+  - description: Finalized Business Process flows signed off before design phase
+    id: DEP-03
+    owner: Customer
+    status: pending
+  - description: Single Product Owner identification and alignment
+    id: DEP-04
+    owner: Customer
+    status: pending
+  - description: SPOC identification for Change Management, training, integrations,
+      IT Infrastructure
+    id: DEP-05
+    owner: Customer
+    status: pending
+  - description: Master data in specified formats before build phase
+    id: DEP-06
+    owner: Customer
+    status: pending
+  - description: Infrastructure and Integration setup by Customer IT team
+    id: DEP-07
+    owner: Customer
+    status: pending
+  - description: Third-party vendor availability during development and testing
+    id: DEP-08
+    owner: Customer
+    status: pending
+  epics:
+  - color: '#8b5cf6'
+    description: Unified LMS platform for managing leads across retail and SME business
+      segments with scalability.
+    id: EP-01
+    name: Lead Management System
+    status: in_progress
+  - color: '#06b6d4'
+    description: Quick data entry capabilities and CSV-based bulk processing for efficient
+      loan application handling.
+    id: EP-02
+    name: Data Processing
+    status: in_progress
+  - color: '#10b981'
+    description: Comprehensive integration layer connecting 170 touchpoints across
+      69 external systems.
+    id: EP-03
+    name: System Integrations
+    status: in_progress
+  - color: '#f59e0b'
+    description: Support for retail and SME loan product processing across multiple
+      business segments.
+    id: EP-04
+    name: Loan Products
+    status: in_progress
+  - color: '#ef4444'
+    description: Core Salesforce platform setup, environment configuration, and custom
+      development delivery.
+    id: EP-05
+    name: Platform Configuration
+    status: in_progress
+  executive_summary: Implementation of a unified Lead Management System (LMS) and
+    Quick Data Entry (QDE) system for Aditya Birla Financial Services across Retail
+    and SME business segments. The project will be delivered in 5 releases covering
+    various loan products and culminating in Straight Through Processing capabilities.
+  integrations:
+  - description: Primary integration layer for all system communications
+    protocol: API
+    system: Customer Middleware/ESB
+    type: bidirectional
+  - description: Integration for loan processing and account management
+    protocol: API
+    system: Core Banking Systems
+    type: bidirectional
+  - description: Document storage and retrieval for loan applications
+    protocol: API
+    system: Document Management System
+    type: outbound
+  - description: Credit assessment and scoring integration
+    protocol: API
+    system: Credit Scoring Systems
+    type: inbound
+  - description: Payment processing and transaction management
+    protocol: API
+    system: Payment Systems
+    type: bidirectional
+  - description: Customer information and KYC data
+    protocol: API
+    system: Customer Master Data
+    type: inbound
+  - description: SMS and email notification delivery
+    protocol: API
+    system: Notification Services
+    type: outbound
+  - description: Real-time event publishing for downstream systems
+    protocol: Event Bus
+    system: Platform Events
+    type: outbound
+  key_requirements:
+  - description: Implement unified Lead Management System (LMS) for scalability
+    id: REQ-01
+    priority: must
+  - description: Support Retail business segment loan products (PL, UBL, MLaP, STUL,
+      STSL, Doctor Loan)
+    id: REQ-02
+    priority: must
+  - description: Support SME business segment loan products (LAP, SEG, Solar, Machinery,
+      Construction Finance, SCF)
+    id: REQ-03
+    priority: must
+  - description: Implement Quick Data Entry (QDE) system
+    id: REQ-04
+    priority: must
+  - description: Enable Straight Through Processing (STP) for pre-approved offers
+    id: REQ-05
+    priority: must
+  - description: Implement 170 integration touchpoints across 69 systems
+    id: REQ-06
+    priority: must
+  - description: Support CSV-based data upload functionality
+    id: REQ-07
+    priority: must
+  - description: Achieve high adoption of new LMS system
+    id: REQ-08
+    priority: should
+  - description: Support event handling through Platform Events
+    id: REQ-09
+    priority: must
+  - description: Integrate with Customer middleware/ESB systems
+    id: REQ-10
+    priority: must
+  personas:
+  - frustrations:
+    - Multiple system logins
+    - Data inconsistency
+    - Manual processes
+    goals:
+    - Process leads efficiently
+    - Access complete customer information
+    - Meet processing targets
+    name: Loan Officer
+    role: Front-line loan processing
+  - frustrations:
+    - Lack of real-time visibility
+    - Manual reporting
+    - Process bottlenecks
+    goals:
+    - Monitor team performance
+    - Ensure compliance
+    - Optimize processes
+    name: Business Manager
+    role: Business unit oversight
+  - frustrations:
+    - Complex integration management
+    - System performance issues
+    - Security concerns
+    goals:
+    - Maintain system uptime
+    - Manage integrations
+    - Ensure data security
+    name: System Administrator
+    role: Technical system management
+  - frustrations:
+    - Changing requirements
+    - Technical constraints
+    - Timeline pressures
+    goals:
+    - Define clear requirements
+    - Ensure business value delivery
+    - Manage stakeholder expectations
+    name: Product Owner
+    role: Business requirements definition
+  - frustrations:
+    - Long processing times
+    - Multiple document requests
+    - Lack of status updates
+    goals:
+    - Quick loan approval
+    - Transparent process
+    - Easy application submission
+    name: Customer
+    role: Loan applicant
+  phases:
+  - name: Discovery
+    progress: 0%
+    status: upcoming
+  - name: Design
+    progress: 0%
+    status: upcoming
+  - name: Build
+    progress: 0%
+    status: upcoming
+  - name: Test & UAT
+    progress: 0%
+    status: upcoming
+  - name: Go-Live
+    progress: 0%
+    status: upcoming
+  - name: Hypercare
+    progress: 0%
+    status: upcoming
+  project_name: LMS and Quick Data Entry (QDE) Implementation for Aditya Birla Financial
+    Services
+  risks:
+  - description: Delays in API specifications and sample data provision before design
+      phase
+    id: R-01
+    owner: Customer
+    severity: high
+  - description: Production ready APIs not available before build phase commencement
+    id: R-02
+    owner: Customer
+    severity: high
+  - description: Integration touchpoints exceeding defined numbers per release
+    id: R-03
+    owner: Customer/SFDC
+    severity: med
+  - description: Business teams unavailable for workshops and sign-offs
+    id: R-04
+    owner: Customer
+    severity: med
+  - description: Delayed provision of master data in specified formats
+    id: R-05
+    owner: Customer
+    severity: med
+  - description: Third-party vendor coordination delays for integrations
+    id: R-06
+    owner: Customer
+    severity: med
+  scope_in:
+  - LMS implementation for Retail and SME business segments
+  - Quick Data Entry (QDE) system implementation
+  - Support for multiple loan products (PL, UBL, MLaP, STUL, STSL, Doctor Loan, LAP,
+    SEG, Solar, Machinery, Construction Finance, SCF)
+  - 170 integration touchpoints across 69 systems
+  - Straight Through Processing (STP) for pre-approved offers
+  - Core Salesforce Platform (Sales Cloud) configuration
+  - Data integrations implementation
+  - 5 release delivery approach
+  - Standard configuration and custom code development
+  - CSV-based data upload capabilities
+  scope_out:
+  - Excel file-based data uploads
+  - UI customization of import wizard
+  - Third-party product licenses procurement
+  - Failover and disaster recovery environments
+  - Existing system retirement and decommissioning
+  - Production environment infrastructure management post go-live
+  - Customer or third-party system performance and functionality
+  stakeholders:
+  - impact: med
+    name: Pooja Sharma
+    role: Customer Billing/Invoicing Contact
+  - impact: high
+    name: Ravikiran Achuthakumar
+    role: SFDC Primary Sales Contact
+  - impact: high
+    name: Customer Product Owner
+    role: Business Requirements Sign-off
+  - impact: high
+    name: SFDC Project Manager
+    role: Project Delivery Management
+  - impact: high
+    name: Customer IT Team
+    role: Infrastructure and Integration Support
+  - impact: high
+    name: Customer Business Teams
+    role: Workshops and User Story Sign-offs
+  timeline:
+    duration: 5 releases
+    end: ''
+    milestones:
+    - date: ''
+      name: Release 1 - LMS for Retail Products & SCF
+    - date: ''
+      name: Release 2 - QDE for PL product
+    - date: ''
+      name: Release 3 - QDE for Rest of Retail Products & SCF
+    - date: ''
+      name: Release 4 - LMS and QDE for SME Business
+    - date: ''
+      name: Release 5 - STP for Retail and SME products
+    start: ''
+  user_stories:
+  - acceptance_criteria:
+    - Access to all loan product types
+    - Unified interface for lead management
+    - Role-based access control
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-01
+    id: US-01
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a loan officer, I want to access a unified LMS so that I can manage
+      leads across all business segments efficiently
+    type: story
+  - acceptance_criteria:
+    - Streamlined data entry forms
+    - Field validation
+    - Quick save functionality
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-02
+    id: US-02
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a business user, I want Quick Data Entry capabilities so that I can
+      process loan applications faster
+    type: story
+  - acceptance_criteria:
+    - 170 integration touchpoints working
+    - Real-time data synchronization
+    - Error handling and logging
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-03
+    id: US-03
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a system administrator, I want integration with existing systems so
+      that data flows seamlessly between platforms
+    type: story
+  - acceptance_criteria:
+    - Automated processing rules
+    - Pre-qualification criteria setup
+    - Audit trail maintenance
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-01
+    id: US-04
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a business manager, I want STP for pre-approved offers so that I can
+      process qualified leads automatically
+    type: story
+  - acceptance_criteria:
+    - CSV format validation
+    - Bulk upload wizard
+    - Error reporting for failed uploads
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-02
+    id: US-05
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a loan processor, I want to upload data via CSV files so that I can
+      bulk process applications efficiently
+    type: story
+  - acceptance_criteria:
+    - PL-specific workflows
+    - Document collection tracking
+    - Status updates
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-04
+    id: US-06
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a retail business user, I want personal loan processing capabilities
+      so that I can handle PL applications
+    type: story
+  - acceptance_criteria:
+    - LAP-specific workflows
+    - Property valuation integration
+    - Security documentation
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-04
+    id: US-07
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As an SME business user, I want LAP processing capabilities so that I can
+      handle property-backed loans
+    type: story
+  - acceptance_criteria:
+    - SMS/Email templates
+    - Automated triggers
+    - Delivery status tracking
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-03
+    id: US-08
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a business user, I want notification capabilities so that I can communicate
+      with customers effectively
+    type: story
+  - acceptance_criteria:
+    - Master data upload capability
+    - Data validation rules
+    - Change tracking
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-03
+    id: US-09
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a data analyst, I want master data management so that I can maintain
+      consistent reference data
+    type: story
+  - acceptance_criteria:
+    - Complete activity logging
+    - User action tracking
+    - Data access monitoring
+    assignee: null
+    derived: false
+    description: ''
+    epic_id: EP-01
+    id: US-10
+    labels: []
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: null
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a compliance officer, I want audit trails so that I can track all system
+      activities for regulatory purposes
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-01 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Implement unified Lead Management System (LMS) for scalability
+    epic_id: EP-01
+    id: US-11
+    labels:
+    - requirement
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: requirement:REQ-01
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Implement unified Lead Management System (LMS) for
+      scalability'
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-02 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Support Retail business segment loan products (PL, UBL, MLaP, STUL,
+      STSL, Doctor Loan)
+    epic_id: EP-04
+    id: US-12
+    labels:
+    - requirement
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: requirement:REQ-02
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Support Retail business segment loan products (PL,
+      UBL, MLaP, STUL, STSL, Doctor Loan)'
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-03 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Support SME business segment loan products (LAP, SEG, Solar, Machinery,
+      Construction Finance, SCF)
+    epic_id: EP-04
+    id: US-13
+    labels:
+    - requirement
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: requirement:REQ-03
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Support SME business segment loan products (LAP,
+      SEG, Solar, Machinery, Construction Finance, SCF)'
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-04 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Implement Quick Data Entry (QDE) system
+    epic_id: EP-02
+    id: US-14
+    labels:
+    - requirement
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: requirement:REQ-04
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Implement Quick Data Entry (QDE) system'
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-05 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Enable Straight Through Processing (STP) for pre-approved offers
+    epic_id: EP-01
+    id: US-15
+    labels:
+    - requirement
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: requirement:REQ-05
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Enable Straight Through Processing (STP) for pre-approved
+      offers'
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-06 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Implement 170 integration touchpoints across 69 systems
+    epic_id: EP-03
+    id: US-16
+    labels:
+    - requirement
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: requirement:REQ-06
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Implement 170 integration touchpoints across 69
+      systems'
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-07 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Support CSV-based data upload functionality
+    epic_id: EP-02
+    id: US-17
+    labels:
+    - requirement
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: requirement:REQ-07
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Support CSV-based data upload functionality'
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-08 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Achieve high adoption of new LMS system
+    epic_id: EP-01
+    id: US-18
+    labels:
+    - requirement
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: requirement:REQ-08
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Achieve high adoption of new LMS system'
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-09 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Support event handling through Platform Events
+    epic_id: EP-03
+    id: US-19
+    labels:
+    - requirement
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: requirement:REQ-09
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Support event handling through Platform Events'
+    type: story
+  - acceptance_criteria:
+    - Requirement REQ-10 is implemented and verifiable
+    - Verified by acceptance test
+    assignee: null
+    derived: true
+    description: Integrate with Customer middleware/ESB systems
+    epic_id: EP-03
+    id: US-20
+    labels:
+    - requirement
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: requirement:REQ-10
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: 'System shall support: Integrate with Customer middleware/ESB systems'
+    type: story
+  - acceptance_criteria:
+    - Customer Middleware/ESB bidirectional data flow is established and tested
+    - Error handling and retry logic are in place
+    - Integration monitoring/alerting is configured
+    assignee: null
+    derived: true
+    description: Primary integration layer for all system communications
+    epic_id: EP-03
+    id: US-21
+    labels:
+    - integration
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: integration:Customer Middleware/ESB
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a System, I want to integrate with Customer Middleware/ESB (bidirectional)
+      via API
+    type: story
+  - acceptance_criteria:
+    - Core Banking Systems bidirectional data flow is established and tested
+    - Error handling and retry logic are in place
+    - Integration monitoring/alerting is configured
+    assignee: null
+    derived: true
+    description: Integration for loan processing and account management
+    epic_id: EP-03
+    id: US-22
+    labels:
+    - integration
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: integration:Core Banking Systems
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a System, I want to integrate with Core Banking Systems (bidirectional)
+      via API
+    type: story
+  - acceptance_criteria:
+    - Document Management System outbound data flow is established and tested
+    - Error handling and retry logic are in place
+    - Integration monitoring/alerting is configured
+    assignee: null
+    derived: true
+    description: Document storage and retrieval for loan applications
+    epic_id: EP-03
+    id: US-23
+    labels:
+    - integration
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: integration:Document Management System
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a System, I want to integrate with Document Management System (outbound)
+      via API
+    type: story
+  - acceptance_criteria:
+    - Credit Scoring Systems inbound data flow is established and tested
+    - Error handling and retry logic are in place
+    - Integration monitoring/alerting is configured
+    assignee: null
+    derived: true
+    description: Credit assessment and scoring integration
+    epic_id: EP-03
+    id: US-24
+    labels:
+    - integration
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: integration:Credit Scoring Systems
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a System, I want to integrate with Credit Scoring Systems (inbound)
+      via API
+    type: story
+  - acceptance_criteria:
+    - Payment Systems bidirectional data flow is established and tested
+    - Error handling and retry logic are in place
+    - Integration monitoring/alerting is configured
+    assignee: null
+    derived: true
+    description: Payment processing and transaction management
+    epic_id: EP-03
+    id: US-25
+    labels:
+    - integration
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: integration:Payment Systems
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a System, I want to integrate with Payment Systems (bidirectional) via
+      API
+    type: story
+  - acceptance_criteria:
+    - Customer Master Data inbound data flow is established and tested
+    - Error handling and retry logic are in place
+    - Integration monitoring/alerting is configured
+    assignee: null
+    derived: true
+    description: Customer information and KYC data
+    epic_id: EP-03
+    id: US-26
+    labels:
+    - integration
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: integration:Customer Master Data
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a System, I want to integrate with Customer Master Data (inbound) via
+      API
+    type: story
+  - acceptance_criteria:
+    - Notification Services outbound data flow is established and tested
+    - Error handling and retry logic are in place
+    - Integration monitoring/alerting is configured
+    assignee: null
+    derived: true
+    description: SMS and email notification delivery
+    epic_id: EP-03
+    id: US-27
+    labels:
+    - integration
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: integration:Notification Services
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a System, I want to integrate with Notification Services (outbound)
+      via API
+    type: story
+  - acceptance_criteria:
+    - Platform Events outbound data flow is established and tested
+    - Error handling and retry logic are in place
+    - Integration monitoring/alerting is configured
+    assignee: null
+    derived: true
+    description: Real-time event publishing for downstream systems
+    epic_id: EP-03
+    id: US-28
+    labels:
+    - integration
+    manually_edited: false
+    priority: high
+    reporter: null
+    source_doc: integration:Platform Events
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As a System, I want to integrate with Platform Events (outbound) via Event
+      Bus
+    type: story
+  - acceptance_criteria:
+    - Action is completed and signed off
+    assignee: null
+    derived: true
+    description: Configure Core Salesforce Platform (Sales Cloud) for LMS and QDE
+    epic_id: EP-05
+    id: US-29
+    labels:
+    - delivery-action
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: action-ps
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As the delivery team, I want to Configure Core Salesforce Platform (Sales
+      Cloud) for LMS and QDE
+    type: story
+  - acceptance_criteria:
+    - Action is completed and signed off
+    assignee: null
+    derived: true
+    description: Implement 170 integration touchpoints across 69 systems
+    epic_id: EP-03
+    id: US-30
+    labels:
+    - delivery-action
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: action-ps
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As the delivery team, I want to Implement 170 integration touchpoints across
+      69 systems
+    type: story
+  - acceptance_criteria:
+    - Action is completed and signed off
+    assignee: null
+    derived: true
+    description: Develop custom code and standard configurations for all business
+      segments
+    epic_id: EP-05
+    id: US-31
+    labels:
+    - delivery-action
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: action-ps
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As the delivery team, I want to Develop custom code and standard configurations
+      for all business segments
+    type: story
+  - acceptance_criteria:
+    - Action is completed and signed off
+    assignee: null
+    derived: true
+    description: Implement STP process for pre-approved offers
+    epic_id: EP-01
+    id: US-32
+    labels:
+    - delivery-action
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: action-ps
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As the delivery team, I want to Implement STP process for pre-approved
+      offers
+    type: story
+  - acceptance_criteria:
+    - Action is completed and signed off
+    assignee: null
+    derived: true
+    description: Configure CSV-based data upload functionality
+    epic_id: EP-02
+    id: US-33
+    labels:
+    - delivery-action
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: action-ps
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As the delivery team, I want to Configure CSV-based data upload functionality
+    type: story
+  - acceptance_criteria:
+    - Action is completed and signed off
+    assignee: null
+    derived: true
+    description: Conduct Discovery and Design phases for each release
+    epic_id: EP-05
+    id: US-34
+    labels:
+    - delivery-action
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: action-ps
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As the delivery team, I want to Conduct Discovery and Design phases for
+      each release
+    type: story
+  - acceptance_criteria:
+    - Action is completed and signed off
+    assignee: null
+    derived: true
+    description: Set up and configure all environments during implementation
+    epic_id: EP-05
+    id: US-35
+    labels:
+    - delivery-action
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: action-ps
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As the delivery team, I want to Set up and configure all environments during
+      implementation
+    type: story
+  - acceptance_criteria:
+    - Action is completed and signed off
+    assignee: null
+    derived: true
+    description: Define integration plan during Design phase
+    epic_id: EP-03
+    id: US-36
+    labels:
+    - delivery-action
+    manually_edited: false
+    priority: medium
+    reporter: null
+    source_doc: action-ps
+    source_excerpt: null
+    sprint: null
+    status: backlog
+    story_points: null
+    title: As the delivery team, I want to Define integration plan during Design phase
+    type: story
 schema_version: 1
-updated_at: '2026-06-18T09:03:30.776046+00:00'
+updated_at: '2026-06-18T10:10:32.626691+00:00'
