@@ -1417,6 +1417,297 @@ pipeline_artifacts:
       - Email action is configured to send notifications using the created template
       - Process can be activated successfully and shows Active status
       - Test execution triggers the automated process when account field is updated
+      edit_log:
+      - at: '2026-06-18T12:06:52.503677+00:00'
+        by: ankit.kumar5@salesforce.com
+        rationale: Removing the Classic Email Templates navigation step as it's not
+          needed for the Sales User email workflow.
+        snapshot_before:
+          assertions:
+          - Email template 'Customer Notification Template' is created with merge
+            fields for personalization
+          - Process Builder trigger 'Customer Notification Trigger' is configured
+            and activated for Account object
+          - Automated trigger fires when Notification_Status__c field equals 'Send
+            Notification'
+          - Email action is configured to send notifications using the created template
+          - Process can be activated successfully and shows Active status
+          - Test execution triggers the automated process when account field is updated
+          estimated_duration_minutes: 25
+          generated_at: '2026-06-18T12:02:51.784613+00:00'
+          linked_story: US-08
+          pass_criteria: All notification components are configured successfully -
+            email template with merge fields exists, automated trigger process is
+            active and responds to field changes, and delivery mechanism is properly
+            configured
+          preconditions:
+            app: Sales
+            test_data:
+            - Account named 'Test Customer Corp' exists with valid email address
+            - Contact named 'John Test' exists linked to Test Customer Corp with valid
+              email address
+            - Custom field Notification_Status__c exists on Account object with picklist
+              values
+            user_profile: System Administrator
+          steps:
+          - action: click
+            detail: Click the gear icon (⚙) in the top-right corner of the Lightning
+              header
+            expected: Setup dropdown menu appears
+            step: 1
+            step_id: s1
+            target: Setup gear icon
+          - action: click
+            detail: Click 'Setup' from the dropdown menu
+            expected: Setup home page loads showing administration options
+            step: 2
+            step_id: s2
+            target: Setup
+          - action: click
+            detail: In the Setup Quick Find box, search for and click 'Classic Email
+              Templates'
+            expected: Classic Email Templates page loads showing existing templates
+              list
+            step: 3
+            step_id: s3
+            target: Classic Email Templates
+          - action: click
+            detail: Click the 'New Template' button
+            expected: Select Template Type page appears
+            step: 4
+            step_id: s4
+            target: New Template button
+          - action: click
+            detail: Select the 'Text' radio button for template type
+            expected: Text template type is selected
+            step: 5
+            step_id: s5
+            target: Text radio button
+          - action: click
+            detail: Click the 'Next' button to proceed
+            expected: Template creation form loads
+            step: 6
+            step_id: s6
+            target: Next button
+          - action: fill
+            data: Customer Notification Template
+            detail: Enter 'Customer Notification Template' in the Template Name field
+            expected: Template Name field displays 'Customer Notification Template'
+            step: 7
+            step_id: s7
+            target: Template Name field (input[name="templateName"])
+          - action: fill
+            data: Important Update from {!Account.Name}
+            detail: Enter 'Important Update from {!Account.Name}' in the Subject field
+            expected: Subject field displays 'Important Update from {!Account.Name}'
+            step: 8
+            step_id: s8
+            target: Subject field (input[name="subject"])
+          - action: fill
+            data: 'Dear {!Contact.FirstName} {!Contact.LastName},
+
+
+              We have an important update regarding your account {!Account.Name}.
+
+
+              Thank you,
+
+              Customer Service Team'
+            detail: Enter template body text with merge fields for personalization
+            expected: Body text area contains the personalized template text with
+              merge fields
+            step: 9
+            step_id: s9
+            target: Body text area
+          - action: click
+            detail: Click the 'Save' button to create the email template
+            expected: Email template is created and confirmation message appears
+            step: 10
+            step_id: s10
+            target: Save button
+          - action: click
+            detail: In the Setup Quick Find box, search for and click 'Process Builder'
+            expected: Process Builder page loads showing list of existing processes
+            step: 11
+            step_id: s11
+            target: Process Builder
+          - action: click
+            detail: Click the 'New' button to create a new process
+            expected: New Process dialog opens
+            step: 12
+            step_id: s12
+            target: New button
+          - action: fill
+            data: Customer Notification Trigger
+            detail: Enter 'Customer Notification Trigger' in the Process Name field
+            expected: Process Name field displays 'Customer Notification Trigger'
+            step: 13
+            step_id: s13
+            target: Process Name field (input[name="processName"])
+          - action: select_picklist
+            detail: Select 'A record changes' from the Process Type dropdown
+            expected: Process Type shows 'A record changes'
+            step: 14
+            step_id: s14
+            target: Process Type picklist (button[role="combobox"][aria-label="The
+              process starts when"])
+            value: A record changes
+          - action: click
+            detail: Click 'Save' to create the process definition
+            expected: Process Builder canvas opens for configuration
+            step: 15
+            step_id: s15
+            target: Save button
+          - action: click
+            detail: Click 'Add Object' to specify which object triggers the process
+            expected: Choose Object and Specify When to Start the Process dialog opens
+            step: 16
+            step_id: s16
+            target: Add Object button
+          - action: select_lookup
+            detail: Search for and select 'Account' as the trigger object
+            expected: Object field shows 'Account'
+            query: Account
+            step: 17
+            step_id: s17
+            target: Object lookup (input[role="combobox"][aria-label="Object"])
+          - action: click
+            detail: Click 'Save' to set Account as the trigger object
+            expected: Process returns to canvas with Account object configured
+            step: 18
+            step_id: s18
+            target: Save button
+          - action: click
+            detail: Click 'Add Criteria' to define when the process should run
+            expected: Define Criteria dialog opens
+            step: 19
+            step_id: s19
+            target: Add Criteria button
+          - action: fill
+            data: Notification Status Changed
+            detail: Enter 'Notification Status Changed' as the criteria name
+            expected: Criteria Name field displays 'Notification Status Changed'
+            step: 20
+            step_id: s20
+            target: Criteria Name field (input[name="criteriaName"])
+          - action: click
+            detail: Click 'Add Row' to add a condition
+            expected: New condition row appears in the criteria section
+            step: 21
+            step_id: s21
+            target: Add Row button
+          - action: select_lookup
+            detail: Select the Notification_Status__c field from the Account object
+            expected: Field shows 'Notification_Status__c'
+            query: Notification_Status__c
+            step: 22
+            step_id: s22
+            target: Field lookup (input[role="combobox"][aria-label="Field"])
+          - action: select_picklist
+            detail: Select 'Equals' as the operator
+            expected: Operator shows 'Equals'
+            step: 23
+            step_id: s23
+            target: Operator picklist (button[role="combobox"][aria-label="Operator"])
+            value: Equals
+          - action: fill
+            data: Send Notification
+            detail: Enter 'Send Notification' as the trigger value
+            expected: Value field displays 'Send Notification'
+            step: 24
+            step_id: s24
+            target: Value field (input[name="value"])
+          - action: click
+            detail: Click 'Save' to create the criteria
+            expected: Process returns to canvas with criteria configured
+            step: 25
+            step_id: s25
+            target: Save button
+          - action: click
+            detail: Click 'Add Action' under Immediate Actions
+            expected: Choose Action Type dialog opens
+            step: 26
+            step_id: s26
+            target: Add Action button
+          - action: select_picklist
+            detail: Select 'Email Alerts' from the Action Type dropdown
+            expected: Action Type shows 'Email Alerts'
+            step: 27
+            step_id: s27
+            target: Action Type picklist (button[role="combobox"][aria-label="Action
+              Type"])
+            value: Email Alerts
+          - action: fill
+            data: Send Customer Notification
+            detail: Enter 'Send Customer Notification' as the action name
+            expected: Action Name field displays 'Send Customer Notification'
+            step: 28
+            step_id: s28
+            target: Action Name field (input[name="actionName"])
+          - action: click
+            detail: Click 'Save' to create the email action
+            expected: Process returns to canvas with email action configured
+            step: 29
+            step_id: s29
+            target: Save button
+          - action: click
+            detail: Click 'Activate' to enable the automated trigger process
+            expected: Process activation confirmation dialog appears
+            step: 30
+            step_id: s30
+            target: Activate button
+          - action: click
+            detail: Click 'Confirm' to activate the process
+            expected: Process is activated and status shows as Active
+            step: 31
+            step_id: s31
+            target: Confirm button
+          - action: navigate
+            detail: Navigate to Accounts list view to test the notification trigger
+            expected: Accounts list view loads showing existing accounts
+            step: 32
+            step_id: s32
+            url: /lightning/o/Account/list
+          - action: click
+            detail: Click on the 'Test Customer Corp' account record to open it
+            expected: Account detail page for Test Customer Corp loads
+            step: 33
+            step_id: s33
+            target: Test Customer Corp
+          - action: click
+            detail: Click the Edit action to modify the account record
+            expected: Account edit modal opens with editable fields
+            step: 34
+            step_id: s34
+            target: Edit
+          - action: select_picklist
+            detail: Change Notification_Status__c field to 'Send Notification'
+            expected: Notification Status shows 'Send Notification'
+            step: 35
+            step_id: s35
+            target: Notification Status picklist (button[role="combobox"][aria-label="Notification
+              Status"])
+            value: Send Notification
+          - action: click
+            detail: Click the Save button to trigger the automated notification process
+            expected: Account record is saved and success toast notification appears
+            step: 36
+            step_id: s36
+            target: Save button (button[name="SaveEdit"])
+          - action: verify
+            detail: Verify the save success message appears
+            expected: Account "Test Customer Corp" was saved.
+            step: 37
+            step_id: s37
+            target: ''
+          story_snapshot: 6a5da506bd60d622
+          test_id: TC-002
+          title: Configure and test notification capabilities with email templates,
+            automated triggers, and delivery tracking
+          user_story: As a business user, I want notification capabilities so that
+            I can communicate with customers effectively
+        summary: delete s3
+        via: chat
       estimated_duration_minutes: 25
       generated_at: '2026-06-18T12:02:51.784613+00:00'
       linked_story: US-08
@@ -1446,41 +1737,35 @@ pipeline_artifacts:
         step_id: s2
         target: Setup
       - action: click
-        detail: In the Setup Quick Find box, search for and click 'Classic Email Templates'
-        expected: Classic Email Templates page loads showing existing templates list
-        step: 3
-        step_id: s3
-        target: Classic Email Templates
-      - action: click
         detail: Click the 'New Template' button
         expected: Select Template Type page appears
-        step: 4
+        step: 3
         step_id: s4
         target: New Template button
       - action: click
         detail: Select the 'Text' radio button for template type
         expected: Text template type is selected
-        step: 5
+        step: 4
         step_id: s5
         target: Text radio button
       - action: click
         detail: Click the 'Next' button to proceed
         expected: Template creation form loads
-        step: 6
+        step: 5
         step_id: s6
         target: Next button
       - action: fill
         data: Customer Notification Template
         detail: Enter 'Customer Notification Template' in the Template Name field
         expected: Template Name field displays 'Customer Notification Template'
-        step: 7
+        step: 6
         step_id: s7
         target: Template Name field (input[name="templateName"])
       - action: fill
         data: Important Update from {!Account.Name}
         detail: Enter 'Important Update from {!Account.Name}' in the Subject field
         expected: Subject field displays 'Important Update from {!Account.Name}'
-        step: 8
+        step: 7
         step_id: s8
         target: Subject field (input[name="subject"])
       - action: fill
@@ -1496,38 +1781,38 @@ pipeline_artifacts:
         detail: Enter template body text with merge fields for personalization
         expected: Body text area contains the personalized template text with merge
           fields
-        step: 9
+        step: 8
         step_id: s9
         target: Body text area
       - action: click
         detail: Click the 'Save' button to create the email template
         expected: Email template is created and confirmation message appears
-        step: 10
+        step: 9
         step_id: s10
         target: Save button
       - action: click
         detail: In the Setup Quick Find box, search for and click 'Process Builder'
         expected: Process Builder page loads showing list of existing processes
-        step: 11
+        step: 10
         step_id: s11
         target: Process Builder
       - action: click
         detail: Click the 'New' button to create a new process
         expected: New Process dialog opens
-        step: 12
+        step: 11
         step_id: s12
         target: New button
       - action: fill
         data: Customer Notification Trigger
         detail: Enter 'Customer Notification Trigger' in the Process Name field
         expected: Process Name field displays 'Customer Notification Trigger'
-        step: 13
+        step: 12
         step_id: s13
         target: Process Name field (input[name="processName"])
       - action: select_picklist
         detail: Select 'A record changes' from the Process Type dropdown
         expected: Process Type shows 'A record changes'
-        step: 14
+        step: 13
         step_id: s14
         target: Process Type picklist (button[role="combobox"][aria-label="The process
           starts when"])
@@ -1535,58 +1820,58 @@ pipeline_artifacts:
       - action: click
         detail: Click 'Save' to create the process definition
         expected: Process Builder canvas opens for configuration
-        step: 15
+        step: 14
         step_id: s15
         target: Save button
       - action: click
         detail: Click 'Add Object' to specify which object triggers the process
         expected: Choose Object and Specify When to Start the Process dialog opens
-        step: 16
+        step: 15
         step_id: s16
         target: Add Object button
       - action: select_lookup
         detail: Search for and select 'Account' as the trigger object
         expected: Object field shows 'Account'
         query: Account
-        step: 17
+        step: 16
         step_id: s17
         target: Object lookup (input[role="combobox"][aria-label="Object"])
       - action: click
         detail: Click 'Save' to set Account as the trigger object
         expected: Process returns to canvas with Account object configured
-        step: 18
+        step: 17
         step_id: s18
         target: Save button
       - action: click
         detail: Click 'Add Criteria' to define when the process should run
         expected: Define Criteria dialog opens
-        step: 19
+        step: 18
         step_id: s19
         target: Add Criteria button
       - action: fill
         data: Notification Status Changed
         detail: Enter 'Notification Status Changed' as the criteria name
         expected: Criteria Name field displays 'Notification Status Changed'
-        step: 20
+        step: 19
         step_id: s20
         target: Criteria Name field (input[name="criteriaName"])
       - action: click
         detail: Click 'Add Row' to add a condition
         expected: New condition row appears in the criteria section
-        step: 21
+        step: 20
         step_id: s21
         target: Add Row button
       - action: select_lookup
         detail: Select the Notification_Status__c field from the Account object
         expected: Field shows 'Notification_Status__c'
         query: Notification_Status__c
-        step: 22
+        step: 21
         step_id: s22
         target: Field lookup (input[role="combobox"][aria-label="Field"])
       - action: select_picklist
         detail: Select 'Equals' as the operator
         expected: Operator shows 'Equals'
-        step: 23
+        step: 22
         step_id: s23
         target: Operator picklist (button[role="combobox"][aria-label="Operator"])
         value: Equals
@@ -1594,25 +1879,25 @@ pipeline_artifacts:
         data: Send Notification
         detail: Enter 'Send Notification' as the trigger value
         expected: Value field displays 'Send Notification'
-        step: 24
+        step: 23
         step_id: s24
         target: Value field (input[name="value"])
       - action: click
         detail: Click 'Save' to create the criteria
         expected: Process returns to canvas with criteria configured
-        step: 25
+        step: 24
         step_id: s25
         target: Save button
       - action: click
         detail: Click 'Add Action' under Immediate Actions
         expected: Choose Action Type dialog opens
-        step: 26
+        step: 25
         step_id: s26
         target: Add Action button
       - action: select_picklist
         detail: Select 'Email Alerts' from the Action Type dropdown
         expected: Action Type shows 'Email Alerts'
-        step: 27
+        step: 26
         step_id: s27
         target: Action Type picklist (button[role="combobox"][aria-label="Action Type"])
         value: Email Alerts
@@ -1620,49 +1905,49 @@ pipeline_artifacts:
         data: Send Customer Notification
         detail: Enter 'Send Customer Notification' as the action name
         expected: Action Name field displays 'Send Customer Notification'
-        step: 28
+        step: 27
         step_id: s28
         target: Action Name field (input[name="actionName"])
       - action: click
         detail: Click 'Save' to create the email action
         expected: Process returns to canvas with email action configured
-        step: 29
+        step: 28
         step_id: s29
         target: Save button
       - action: click
         detail: Click 'Activate' to enable the automated trigger process
         expected: Process activation confirmation dialog appears
-        step: 30
+        step: 29
         step_id: s30
         target: Activate button
       - action: click
         detail: Click 'Confirm' to activate the process
         expected: Process is activated and status shows as Active
-        step: 31
+        step: 30
         step_id: s31
         target: Confirm button
       - action: navigate
         detail: Navigate to Accounts list view to test the notification trigger
         expected: Accounts list view loads showing existing accounts
-        step: 32
+        step: 31
         step_id: s32
         url: /lightning/o/Account/list
       - action: click
         detail: Click on the 'Test Customer Corp' account record to open it
         expected: Account detail page for Test Customer Corp loads
-        step: 33
+        step: 32
         step_id: s33
         target: Test Customer Corp
       - action: click
         detail: Click the Edit action to modify the account record
         expected: Account edit modal opens with editable fields
-        step: 34
+        step: 33
         step_id: s34
         target: Edit
       - action: select_picklist
         detail: Change Notification_Status__c field to 'Send Notification'
         expected: Notification Status shows 'Send Notification'
-        step: 35
+        step: 34
         step_id: s35
         target: Notification Status picklist (button[role="combobox"][aria-label="Notification
           Status"])
@@ -1670,13 +1955,13 @@ pipeline_artifacts:
       - action: click
         detail: Click the Save button to trigger the automated notification process
         expected: Account record is saved and success toast notification appears
-        step: 36
+        step: 35
         step_id: s36
         target: Save button (button[name="SaveEdit"])
       - action: verify
         detail: Verify the save success message appears
         expected: Account "Test Customer Corp" was saved.
-        step: 37
+        step: 36
         step_id: s37
         target: ''
       story_snapshot: 6a5da506bd60d622
@@ -1688,4 +1973,4 @@ pipeline_artifacts:
     test_suite: Notification Capabilities Test Suite
     total_tests: 2
 schema_version: 1
-updated_at: '2026-06-18T12:06:37.891197+00:00'
+updated_at: '2026-06-18T12:06:52.564678+00:00'
