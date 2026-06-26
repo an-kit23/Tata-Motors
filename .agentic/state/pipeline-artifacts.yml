@@ -892,61 +892,12 @@ pipeline_artifacts:
     suite_id: SUITE-001
     suite_name: Community Suite Execution
     summary:
-      failed: 0
+      failed: 1
       pass_rate: 0%
       passed: 0
-      skipped: 2
-      total: 2
+      skipped: 0
+      total: 1
     test_results:
-    - aborted: false
-      browser_closed: false
-      duration_seconds: 43.4
-      executor: mcp
-      failure_detail: Test skipped - Portal login credentials not available in test
-        environment. The browser_portal_login tool returned 'not_found' indicating
-        no valid community user credentials are configured for this portal login form.
-      linked_story: US-37
-      persona: Community User
-      screenshot: null
-      skipped: true
-      status: skipped
-      step_results:
-      - action: navigate
-        detail: "Navigated to https://anku2044-dev-ed.my.site.com/customer/login\n\
-          \n--- Fresh page snapshot (taken automatically because the page may have\
-          \ changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/login\n\
-          page_title: Login | Customer Portal\nelements:\n  e3: <input name='Login'\
-          \ type='submit'> 'Lo"
-        elapsed_seconds: 10.5
-        purpose: Navigate to the community portal login URL
-        status: passed
-        step: 1
-        target: https://anku2044-dev-ed.my.site.com/customer/login
-      - action: navigate
-        detail: "Navigated to https://anku2044-dev-ed.my.site.com/customer/s/login\n\
-          \n--- Fresh page snapshot (taken automatically because the page may have\
-          \ changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/login/\n\
-          page_title: Login\nelements:\n  e1: <input> 'Username'\n  e2: <input type='password'>\
-          \ 'P"
-        elapsed_seconds: 23.2
-        purpose: Navigate to the standard community portal login page
-        status: passed
-        step: 2
-        target: https://anku2044-dev-ed.my.site.com/customer/s/login
-      - action: portal_login
-        detail: portal login form fields not found on the page. Verify portal_url/portal_login_url.
-        elapsed_seconds: 29.2
-        purpose: Enter valid community user credentials and submit the login form
-        status: failed
-        step: 3
-        target: ''
-      steps_executed: 3
-      steps_passed: 2
-      summary: Test skipped - Portal login credentials not available in test environment.
-        The browser_portal_login tool returned 'not_found' indicating no valid community
-        user credentials are configured for this portal login form.
-      test_id: TC-037
-      title: Community portal login with username and password authentication
     - aborted: false
       browser_closed: false
       duration_seconds: 16.3
@@ -976,83 +927,21 @@ pipeline_artifacts:
       title: Create Case from portal Cases tab with contact association
   - aborted: false
     completed_at: '2026-06-26T13:19:50.418396+00:00'
-    defects:
-    - created_at: '2026-06-26T13:19:50.418419+00:00'
-      defect_id: DEF-037
-      error: 'Stopped after 2 consecutive failed attempts. Last issue: portal login
-        form fields not found on the page. Verify portal_url/portal_login_url.'
-      jira_key: ''
-      jira_pushed_at: ''
-      linked_story: US-37
-      persona: Community User
-      resolved_at: ''
-      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
-      severity: Medium
-      status: open
-      story_title: ''
-      test_id: TC-037
-      title: Community portal login with username and password authentication
+    defects: []
     executed_by: Test Execution Agent — ankitkumarvkp@gmail.com.dev
     execution_id: EXEC-79755675
     org_url: https://login.salesforce.com
     started_at: '2026-06-26T13:19:18.143397+00:00'
     summary:
-      failed: 1
+      failed: 0
       pass_rate: 0%
       passed: 0
       skipped: 0
-      total: 1
-    test_results:
-    - aborted: false
-      browser_closed: false
-      duration_seconds: 25.2
-      executor: mcp
-      failure_detail: 'Stopped after 2 consecutive failed attempts. Last issue: portal
-        login form fields not found on the page. Verify portal_url/portal_login_url.'
-      linked_story: US-37
-      persona: Community User
-      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
-      skipped: false
-      status: failed
-      step_results:
-      - action: navigate
-        detail: 'navigation failed — Page.goto: Protocol error (Page.navigate): Cannot
-          navigate to invalid URL'
-        elapsed_seconds: 6.8
-        purpose: Navigate to the community portal login URL
-        status: failed
-        step: 1
-        target: https://[community-domain].force.com/login
-      - action: portal_login
-        detail: portal login form fields not found on the page. Verify portal_url/portal_login_url.
-        elapsed_seconds: 25.1
-        purpose: Enter valid community user credentials and submit the login form
-        status: failed
-        step: 2
-        target: ''
-      steps_executed: 2
-      steps_passed: 0
-      summary: null
-      test_id: TC-037
-      title: Community portal login with username and password authentication
+      total: 0
+    test_results: []
   - aborted: false
     completed_at: '2026-06-26T13:32:04.247572+00:00'
-    defects:
-    - created_at: '2026-06-26T13:32:04.247579+00:00'
-      defect_id: DEF-037
-      error: 'Stopped after 2 consecutive failed attempts. Last issue: no visible
-        element matches ''button:has-text("commtest1")'''
-      jira_key: ''
-      jira_pushed_at: ''
-      linked_story: US-37
-      persona: Community User
-      resolved_at: ''
-      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
-      severity: Medium
-      status: open
-      story_title: ''
-      test_id: TC-037
-      title: Community portal login with username and password authentication
+    defects: []
     executed_by: Test Execution Agent — ankitkumarvkp@gmail.com.dev
     execution_id: EXEC-e6cead99
     org_url: https://login.salesforce.com
@@ -1060,130 +949,12 @@ pipeline_artifacts:
     suite_id: SUITE-001
     suite_name: Community Suite Execution
     summary:
-      failed: 1
-      pass_rate: 50%
+      failed: 0
+      pass_rate: 100%
       passed: 1
       skipped: 0
-      total: 2
+      total: 1
     test_results:
-    - aborted: false
-      browser_closed: false
-      duration_seconds: 63.4
-      executor: mcp
-      failure_detail: 'Stopped after 2 consecutive failed attempts. Last issue: no
-        visible element matches ''button:has-text("commtest1")'''
-      linked_story: US-37
-      persona: Community User
-      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
-      skipped: false
-      status: failed
-      step_results:
-      - action: verify_text
-        detail: 'Verified: ''Username'' is visible on the page'
-        elapsed_seconds: 6.2
-        purpose: Username
-        status: passed
-        step: 1
-        target: Username
-      - action: verify_text
-        detail: 'Verified: ''Password'' is visible on the page'
-        elapsed_seconds: 9.2
-        purpose: Password
-        status: passed
-        step: 2
-        target: Password
-      - action: portal_login
-        detail: could not locate the portal login form's username and password field(s)
-          on the page. This is a SELECTOR/DOM-locate miss (credentials ARE configured)
-          — the login form uses non-standard field markup. Snapshot the page and try
-          filling the visible Username/Password fields by their labels.
-        elapsed_seconds: 14.9
-        purpose: Enter valid community user credentials and submit the login form
-        status: failed
-        step: 3
-        target: ''
-      - action: fill
-        detail: "Typed 20 characters successfully\n\n--- Fresh page snapshot (taken\
-          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/login/\n\
-          page_title: Login\nelements:\n  e1: <input> 'Username'\n  e2: <input type='password'>\
-          \ 'Password'\n  e3: <button type='butt"
-        elapsed_seconds: 21.0
-        purpose: Fill username field
-        status: passed
-        step: 4
-        target: e1
-      - action: fill
-        detail: "Typed 15 characters successfully\n\n--- Fresh page snapshot (taken\
-          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/login/\n\
-          page_title: Login\nelements:\n  e1: <input> 'Username'\n  e2: <input type='password'>\
-          \ 'Password'\n  e3: <button type='butt"
-        elapsed_seconds: 24.9
-        purpose: Fill password field
-        status: passed
-        step: 5
-        target: e2
-      - action: click
-        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
-          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/login/\n\
-          page_title: Login\nelements:\n  e1: <input> 'Username'\n  e2: <input type='password'>\
-          \ 'Password'\n  e3: <button type='button'> 'Log in"
-        elapsed_seconds: 28.1
-        purpose: Click login button to submit credentials
-        status: passed
-        step: 6
-        target: e3
-      - action: verify_text
-        detail: '''Invalid username or password'' was not visible on the page after
-          waiting. If this is a final assertion, take a fresh snapshot to re-check
-          or call finish — do NOT click or navigate to hunt for it.'
-        elapsed_seconds: 34.9
-        purpose: Invalid username or password
-        status: failed
-        step: 7
-        target: Invalid username or password
-      - action: verify_text
-        detail: 'Verified: ''error'' is visible on the page'
-        elapsed_seconds: 37.3
-        purpose: error
-        status: passed
-        step: 8
-        target: error
-      - action: portal_login
-        detail: 'Portal login submitted for ''community.commtest@anku2044-dev-ed.com''.
-          Current URL: https://anku2044-dev-ed.my.site.com/customer/secur/frontdoor.jsp?allp=1&appkp=1&apv=1&cshc=j0000012Se20000000nNEB&refURL=https%3A%2F%2Fanku2044-dev-ed.my.site.com%2Fcustomer%2Fsecur%2Ffrontdoor.jsp&retURL=%2Fcustomer%2'
-        elapsed_seconds: 45.5
-        purpose: Retry portal login with configured credentials
-        status: passed
-        step: 9
-        target: ''
-      - action: verify_text
-        detail: 'Verified: ''Home'' is visible on the page'
-        elapsed_seconds: 54.7
-        purpose: Home
-        status: passed
-        step: 10
-        target: Home
-      - action: verify_text
-        detail: '''Username'' was not visible on the page after waiting. If this is
-          a final assertion, take a fresh snapshot to re-check or call finish — do
-          NOT click or navigate to hunt for it.'
-        elapsed_seconds: 60.3
-        purpose: Username
-        status: failed
-        step: 11
-        target: Username
-      - action: assert_visible
-        detail: no visible element matches 'button:has-text("commtest1")'
-        elapsed_seconds: 63.3
-        purpose: ''
-        status: failed
-        step: 12
-        target: ''
-      steps_executed: 12
-      steps_passed: 8
-      summary: null
-      test_id: TC-037
-      title: Community portal login with username and password authentication
     - aborted: false
       browser_closed: false
       duration_seconds: 140.3
@@ -1402,8 +1173,8 @@ pipeline_artifacts:
       title: Create Case from portal Cases tab with contact association
   test_scripts:
     estimated_total_duration_minutes: 25
-    generated_at: '2026-06-26T13:09:46.700142+00:00'
-    generated_from: Standalone run — 2 user stories in 1 batch(es)
+    generated_at: '2026-06-26T14:38:17.456427+00:00'
+    generated_from: Standalone run — 1 user stories in 1 batch(es)
     test_cases:
     - assertions:
       - Loan officer can access all loan product types in unified interface
@@ -5503,59 +5274,62 @@ pipeline_artifacts:
       user_story: As the delivery team, I want to Set up and configure all environments
         during implementation
     - assertions:
-      - Portal login page loads successfully at the community login URL
-      - Valid username and password credentials successfully authenticate the user
+      - Community portal login page loads successfully at the specified URL
+      - Valid username and password authentication succeeds
       - User is redirected to authenticated community home page after login
-      - Login form is hidden and replaced with authenticated content
-      - Logged-in user indicator (profile/account menu) is visible
+      - Login form is no longer displayed after successful authentication
+      - Logged-in user indicator (profile/account menu) is visible to confirm authentication
+        state
       estimated_duration_minutes: 3
-      generated_at: '2026-06-26T13:09:46.700440+00:00'
+      generated_at: '2026-06-26T14:38:17.456842+00:00'
       linked_story: US-37
-      pass_criteria: User successfully logs into the community portal with username/password,
-        lands on authenticated home page, login form disappears, and user indicator
-        shows logged-in state
+      pass_criteria: User successfully logs into the community portal with valid credentials,
+        lands on the authenticated home page, login form disappears, and a logged-in
+        indicator is visible
       persona: Community User
       preconditions:
         test_data:
         - Community portal is configured and accessible
-        - Valid community user account exists with username and password credentials
-        url: https://[community-domain].force.com/login
-        user_profile: Community User with valid portal account
+        - Valid community user account exists with username and password
+        - Community home page is configured for authenticated users
+        url: https://company-community.force.com/login
+        user_profile: Community User
       steps:
       - action: navigate
-        detail: Navigate to the community portal login URL
-        expected: The portal login page loads showing username and password fields
+        detail: Navigate to the customer community portal login URL
+        expected: The community login page loads with username and password fields
+          visible
         step: 1
         target: Community portal login page
-        url: https://[community-domain].force.com/login
+        url: https://company-community.force.com/login
+      - action: verify
+        detail: Verify the login page displays the expected form elements
+        expected: Username field, password field, and login button are visible on
+          the page
+        step: 2
+        target: Login page elements
       - action: login
         detail: Enter valid community user credentials and submit the login form
-        expected: Login is successful and user is redirected to authenticated community
-          home page
-        step: 2
-        target: Portal login form
-      - action: verify
-        detail: Verify the user has landed on the authenticated community home page
-        expected: Community home page content is visible and login form is no longer
-          shown
+        expected: Login form submits successfully and user is authenticated
         step: 3
+        target: Community login form
+      - action: verify
+        detail: Verify the user lands on the authenticated community home page
+        expected: The authenticated community home page is displayed and the login
+          form is no longer visible
+        step: 4
         target: Authenticated community home page
       - action: assert_visible
-        detail: Verify a logged-in user indicator is visible such as profile menu
+        detail: Verify a logged-in user indicator is visible such as a profile menu
           or account dropdown
-        expected: User profile menu or account indicator is visible confirming authenticated
-          state
-        step: 4
-        target: Profile or account menu indicator
-      - action: verify
-        detail: Confirm the login form is no longer displayed on the page
-        expected: Login form with username and password fields is not visible
+        expected: A profile menu, account dropdown, or similar logged-in user indicator
+          is visible on the page
         step: 5
-        target: Login form absence
+        target: Profile or account menu indicator
       story_snapshot: ecf2f23d70649ab4
       surface: experience_cloud
       test_id: TC-037
-      title: Community portal login with username and password authentication
+      title: Community user successfully logs into customer portal with valid credentials
       user_story: As a community user, I want to log into the customer community portal
         with my username and password, so that I can access authenticated self-service
         features.
@@ -5638,7 +5412,7 @@ pipeline_artifacts:
       user_story: As a community user, I want to create a Case from the Cases tab
         and associate it with the contact named 'Community CommTest', so that my support
         request is logged against the correct contact.
-    test_suite: Generated test suite — 2 user stories
+    test_suite: Generated test suite — 1 user stories
     total_tests: 38
   test_suites:
   - created_at: '2026-06-26T13:10:58.328953+00:00'
@@ -5650,4 +5424,4 @@ pipeline_artifacts:
     - US-38
     tags: []
 schema_version: 1
-updated_at: '2026-06-26T13:32:04.492822+00:00'
+updated_at: '2026-06-26T14:38:17.528824+00:00'
