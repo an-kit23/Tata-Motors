@@ -1239,7 +1239,7 @@ pipeline_artifacts:
       title: Community user successfully logs into customer portal with valid credentials
   test_scripts:
     estimated_total_duration_minutes: 25
-    generated_at: '2026-06-26T14:38:17.456427+00:00'
+    generated_at: '2026-06-26T14:58:26.430427+00:00'
     generated_from: Standalone run — 1 user stories in 1 batch(es)
     test_cases:
     - assertions:
@@ -5340,62 +5340,56 @@ pipeline_artifacts:
       user_story: As the delivery team, I want to Set up and configure all environments
         during implementation
     - assertions:
-      - Community portal login page loads successfully at the specified URL
-      - Valid username and password authentication succeeds
+      - The portal login page loads and displays username/password fields
+      - Valid credentials successfully authenticate the user
       - User is redirected to authenticated community home page after login
-      - Login form is no longer displayed after successful authentication
-      - Logged-in user indicator (profile/account menu) is visible to confirm authentication
-        state
+      - Login form is no longer shown after successful authentication
+      - A logged-in user indicator (profile/account menu) is visible
       estimated_duration_minutes: 3
-      generated_at: '2026-06-26T14:38:17.456842+00:00'
+      generated_at: '2026-06-26T14:58:26.430805+00:00'
       linked_story: US-37
-      pass_criteria: User successfully logs into the community portal with valid credentials,
-        lands on the authenticated home page, login form disappears, and a logged-in
-        indicator is visible
+      pass_criteria: User successfully logs into the community portal, lands on the
+        authenticated home page, login form disappears, and logged-in indicator is
+        visible
       persona: Community User
       preconditions:
         test_data:
-        - Community portal is configured and accessible
         - Valid community user account exists with username and password
-        - Community home page is configured for authenticated users
-        url: https://company-community.force.com/login
-        user_profile: Community User
+        - Community portal login page is accessible
+        user_profile: Community User with valid login credentials
       steps:
-      - action: navigate
-        detail: Navigate to the customer community portal login URL
-        expected: The community login page loads with username and password fields
-          visible
+      - action: verify
+        detail: Verify the portal login page has loaded and displays the login form
+        expected: The community login page is displayed with username and password
+          fields visible
         step: 1
         target: Community portal login page
-        url: https://company-community.force.com/login
-      - action: verify
-        detail: Verify the login page displays the expected form elements
-        expected: Username field, password field, and login button are visible on
-          the page
-        step: 2
-        target: Login page elements
       - action: login
-        detail: Enter valid community user credentials and submit the login form
-        expected: Login form submits successfully and user is authenticated
-        step: 3
-        target: Community login form
+        detail: Enter valid username and password credentials and submit the login
+          form
+        expected: Login form accepts the credentials and processes the authentication
+          request
+        step: 2
+        target: Portal login form
       - action: verify
-        detail: Verify the user lands on the authenticated community home page
+        detail: Verify the user has been redirected to the authenticated community
+          home page after successful login
         expected: The authenticated community home page is displayed and the login
           form is no longer visible
-        step: 4
+        step: 3
         target: Authenticated community home page
       - action: assert_visible
-        detail: Verify a logged-in user indicator is visible such as a profile menu
-          or account dropdown
-        expected: A profile menu, account dropdown, or similar logged-in user indicator
+        detail: Verify that a logged-in user indicator is visible, such as a profile
+          menu or account dropdown
+        expected: A profile menu, account dropdown, or other logged-in user indicator
           is visible on the page
-        step: 5
+        step: 4
         target: Profile or account menu indicator
       story_snapshot: ecf2f23d70649ab4
       surface: experience_cloud
       test_id: TC-037
-      title: Community user successfully logs into customer portal with valid credentials
+      title: Community user successfully logs into customer portal with username and
+        password
       user_story: As a community user, I want to log into the customer community portal
         with my username and password, so that I can access authenticated self-service
         features.
@@ -5490,4 +5484,4 @@ pipeline_artifacts:
     - US-38
     tags: []
 schema_version: 1
-updated_at: '2026-06-26T14:40:18.219057+00:00'
+updated_at: '2026-06-26T14:58:26.502117+00:00'

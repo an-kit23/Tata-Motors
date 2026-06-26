@@ -8,9 +8,9 @@ Only execute community related functionality
 
 | Test case | Title | Story | Steps |
 | --- | --- | --- | --- |
-| TC-037 | Community user successfully logs into customer portal with valid credentials | US-37 | 5 |
+| TC-037 | Community user successfully logs into customer portal with username and password | US-37 | 4 |
 | TC-038 | Create Case from portal Cases tab with contact association | US-38 | 8 |
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_suites`. Last updated: 2026-06-26T14:40:18.319197+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_suites`. Last updated: 2026-06-26T14:58:26.607081+00:00._

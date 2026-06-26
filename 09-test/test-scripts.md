@@ -38,9 +38,9 @@
 | TC-034 | Verify CSV-based data upload functionality configuration | US-33 | 13 | 5 |
 | TC-035 | Verify Discovery and Design phase documentation and tracking setup | US-34 | 16 | 5 |
 | TC-036 | Verify environment setup and configuration management | US-35 | 15 | 6 |
-| TC-037 | Community user successfully logs into customer portal with valid credentials | US-37 | 5 | 5 |
+| TC-037 | Community user successfully logs into customer portal with username and password | US-37 | 4 | 5 |
 | TC-038 | Create Case from portal Cases tab with contact association | US-38 | 8 | 6 |
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_scripts`. Last updated: 2026-06-26T14:40:18.319458+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.test_scripts`. Last updated: 2026-06-26T14:58:26.607355+00:00._
