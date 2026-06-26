@@ -31,6 +31,11 @@ pipeline_artifacts:
       id: EP-05
       name: Platform Configuration
       status: in_progress
+    - color: '#0ea5e9'
+      description: Customer community portal access and self-service.
+      id: EP-06
+      name: Community Portal
+      status: in_progress
     user_stories:
     - acceptance_criteria:
       - Access to all loan product types
@@ -785,6 +790,55 @@ pipeline_artifacts:
       title: As the delivery team, I want to Define integration plan during Design
         phase
       type: story
+    - acceptance_criteria:
+      - The portal login page loads at the community login URL
+      - Entering a valid username and password and submitting logs the user in
+      - After login the user lands on an authenticated community home page and the
+        login form is no longer shown
+      - A logged-in indicator is visible (e.g. a profile/account menu)
+      assignee: ''
+      derived: false
+      description: ''
+      epic_id: EP-06
+      id: US-37
+      labels: []
+      manually_edited: true
+      priority: high
+      reporter: ''
+      source_doc: ''
+      source_excerpt: ''
+      sprint: ''
+      status: backlog
+      story_points: ''
+      title: As a community user, I want to log into the customer community portal
+        with my username and password, so that I can access authenticated self-service
+        features.
+      type: story
+    - acceptance_criteria:
+      - From the authenticated portal, the user can navigate to the Cases tab/area
+      - The user can start creating a new Case via the New action
+      - The Case form lets the user enter a Subject and a Description
+      - The Case is associated with the Contact named 'Community CommTest'
+      - On submit, the Case is created successfully and a confirmation (case number
+        or success message) is shown
+      assignee: ''
+      derived: false
+      description: ''
+      epic_id: EP-06
+      id: US-38
+      labels: []
+      manually_edited: true
+      priority: high
+      reporter: ''
+      source_doc: ''
+      source_excerpt: ''
+      sprint: ''
+      status: backlog
+      story_points: ''
+      title: As a community user, I want to create a Case from the Cases tab and associate
+        it with the contact named 'Community CommTest', so that my support request
+        is logged against the correct contact.
+      type: story
   test_executions:
   - aborted: false
     completed_at: '2026-06-18T10:27:24.224304+00:00'
@@ -830,8 +884,8 @@ pipeline_artifacts:
     test_results: []
   test_scripts:
     estimated_total_duration_minutes: 25
-    generated_at: '2026-06-26T09:41:41.665975+00:00'
-    generated_from: Standalone run — 36 user stories in 8 batch(es)
+    generated_at: '2026-06-26T13:09:46.700142+00:00'
+    generated_from: Standalone run — 2 user stories in 1 batch(es)
     test_cases:
     - assertions:
       - Loan officer can access all loan product types in unified interface
@@ -4930,7 +4984,143 @@ pipeline_artifacts:
       title: Verify environment setup and configuration management
       user_story: As the delivery team, I want to Set up and configure all environments
         during implementation
-    test_suite: Generated test suite — 36 user stories
-    total_tests: 36
+    - assertions:
+      - Portal login page loads successfully at the community login URL
+      - Valid username and password credentials successfully authenticate the user
+      - User is redirected to authenticated community home page after login
+      - Login form is hidden and replaced with authenticated content
+      - Logged-in user indicator (profile/account menu) is visible
+      estimated_duration_minutes: 3
+      generated_at: '2026-06-26T13:09:46.700440+00:00'
+      linked_story: US-37
+      pass_criteria: User successfully logs into the community portal with username/password,
+        lands on authenticated home page, login form disappears, and user indicator
+        shows logged-in state
+      persona: Community User
+      preconditions:
+        test_data:
+        - Community portal is configured and accessible
+        - Valid community user account exists with username and password credentials
+        url: https://[community-domain].force.com/login
+        user_profile: Community User with valid portal account
+      steps:
+      - action: navigate
+        detail: Navigate to the community portal login URL
+        expected: The portal login page loads showing username and password fields
+        step: 1
+        target: Community portal login page
+        url: https://[community-domain].force.com/login
+      - action: login
+        detail: Enter valid community user credentials and submit the login form
+        expected: Login is successful and user is redirected to authenticated community
+          home page
+        step: 2
+        target: Portal login form
+      - action: verify
+        detail: Verify the user has landed on the authenticated community home page
+        expected: Community home page content is visible and login form is no longer
+          shown
+        step: 3
+        target: Authenticated community home page
+      - action: assert_visible
+        detail: Verify a logged-in user indicator is visible such as profile menu
+          or account dropdown
+        expected: User profile menu or account indicator is visible confirming authenticated
+          state
+        step: 4
+        target: Profile or account menu indicator
+      - action: verify
+        detail: Confirm the login form is no longer displayed on the page
+        expected: Login form with username and password fields is not visible
+        step: 5
+        target: Login form absence
+      story_snapshot: ecf2f23d70649ab4
+      surface: experience_cloud
+      test_id: TC-037
+      title: Community portal login with username and password authentication
+      user_story: As a community user, I want to log into the customer community portal
+        with my username and password, so that I can access authenticated self-service
+        features.
+    - assertions:
+      - Cases tab/area is accessible from authenticated portal navigation
+      - New Case action successfully opens the case creation form
+      - Subject and Description fields can be filled with case details
+      - Case is properly associated with the 'Community CommTest' contact
+      - Case submission succeeds with confirmation message and case number
+      - Created case displays correct contact association
+      estimated_duration_minutes: 5
+      generated_at: '2026-06-26T13:09:46.700440+00:00'
+      linked_story: US-38
+      pass_criteria: User can navigate to Cases area, create new case with Subject
+        and Description, case is associated with 'Community CommTest' contact, and
+        case creation succeeds with confirmation
+      persona: Community User
+      preconditions:
+        test_data:
+        - User is already logged into the community portal
+        - Contact named 'Community CommTest' exists in the system
+        - Cases tab/area is available in the portal navigation
+        - User has permissions to create Cases
+        url: https://[community-domain].force.com/
+        user_profile: Authenticated Community User with Case creation permissions
+      steps:
+      - action: click
+        detail: Navigate to the Cases tab or Cases section in the authenticated portal
+        expected: Cases area loads showing existing cases or empty state with option
+          to create new case
+        step: 1
+        target: Cases tab
+      - action: click
+        detail: Click the New action or New Case button to start creating a new case
+        expected: New Case form opens with Subject, Description, and other case fields
+        step: 2
+        target: New Case button
+      - action: fill
+        data: Portal Test Case - Support Request
+        detail: Enter a subject for the new case
+        expected: Subject field displays the entered text
+        step: 3
+        target: Subject field
+      - action: fill
+        data: This is a test case created from the community portal to verify case
+          creation functionality and contact association.
+        detail: Enter a description for the case detailing the support request
+        expected: Description field displays the entered text
+        step: 4
+        target: Description field
+      - action: verify
+        detail: Verify the case is associated with the contact named 'Community CommTest'
+        expected: Contact field shows 'Community CommTest' or contact association
+          is properly configured
+        step: 5
+        target: Contact association
+      - action: click
+        detail: Submit the new case by clicking the Save or Submit button
+        expected: Case is created successfully and confirmation message or case number
+          is displayed
+        step: 6
+        target: Save button
+      - action: verify
+        detail: Verify case creation success with case number or confirmation message
+        expected: Success message with case number or 'Case was created' confirmation
+          is shown
+        step: 7
+        target: Success confirmation
+      - action: verify
+        detail: Verify the created case shows association with 'Community CommTest'
+          contact
+        expected: Case details page or list shows the case is associated with 'Community
+          CommTest'
+        step: 8
+        target: Case details with contact
+      story_snapshot: 2d94fea0a23a8f35
+      surface: experience_cloud
+      test_id: TC-038
+      title: Create Case from portal Cases tab with contact association
+      user_story: As a community user, I want to create a Case from the Cases tab
+        and associate it with the contact named 'Community CommTest', so that my support
+        request is logged against the correct contact.
+    test_suite: Generated test suite — 2 user stories
+    total_tests: 38
 schema_version: 1
-updated_at: '2026-06-26T09:41:41.733311+00:00'
+updated_at: '2026-06-26T13:09:46.773041+00:00'

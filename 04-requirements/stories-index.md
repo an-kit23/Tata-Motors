@@ -38,7 +38,9 @@
 | US-34 | As the delivery team, I want to Conduct Discovery and Design phases for each release | medium | backlog |
 | US-35 | As the delivery team, I want to Set up and configure all environments during implementation | medium | backlog |
 | US-36 | As the delivery team, I want to Define integration plan during Design phase | medium | backlog |
+| US-37 | As a community user, I want to log into the customer community portal with my username and password, so that I can access authenticated self-service features. | high | backlog |
+| US-38 | As a community user, I want to create a Case from the Cases tab and associate it with the contact named 'Community CommTest', so that my support request is logged against the correct contact. | high | backlog |
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories`. Last updated: 2026-06-26T09:41:41.830414+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories`. Last updated: 2026-06-26T13:09:46.879381+00:00._
