@@ -1171,6 +1171,72 @@ pipeline_artifacts:
         as required.
       test_id: TC-038
       title: Create Case from portal Cases tab with contact association
+  - aborted: false
+    completed_at: '2026-06-26T14:40:18.169724+00:00'
+    defects:
+    - created_at: '2026-06-26T14:40:18.169733+00:00'
+      defect_id: DEF-037
+      error: 'Stopped after 2 consecutive failed attempts. Last issue: ''Username''
+        was not visible on the page after waiting. If this is a final assertion, take
+        a fresh snapshot to re-check or call finish — do NOT click or navigate to
+        hunt for it.'
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-37
+      persona: Community User
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-037
+      title: Community user successfully logs into customer portal with valid credentials
+    executed_by: Test Execution Agent — ankitkumarvkp@gmail.com.dev
+    execution_id: EXEC-0497f1a4
+    org_url: https://anku2044-dev-ed.my.site.com/customer/s/
+    started_at: '2026-06-26T14:39:52.010717+00:00'
+    summary:
+      failed: 1
+      pass_rate: 0%
+      passed: 0
+      skipped: 0
+      total: 1
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 20.5
+      executor: mcp
+      failure_detail: 'Stopped after 2 consecutive failed attempts. Last issue: ''Username''
+        was not visible on the page after waiting. If this is a final assertion, take
+        a fresh snapshot to re-check or call finish — do NOT click or navigate to
+        hunt for it.'
+      linked_story: US-37
+      persona: Community User
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
+      skipped: false
+      status: failed
+      step_results:
+      - action: navigate
+        detail: 'navigation failed — Page.goto: net::ERR_NAME_NOT_RESOLVED at https://company-community.force.com/login'
+        elapsed_seconds: 14.0
+        purpose: Navigate to community portal login page
+        status: failed
+        step: 1
+        target: https://company-community.force.com/login
+      - action: verify_text
+        detail: '''Username'' was not visible on the page after waiting. If this is
+          a final assertion, take a fresh snapshot to re-check or call finish — do
+          NOT click or navigate to hunt for it.'
+        elapsed_seconds: 20.4
+        purpose: Username
+        status: failed
+        step: 2
+        target: Username
+      steps_executed: 2
+      steps_passed: 0
+      summary: null
+      test_id: TC-037
+      title: Community user successfully logs into customer portal with valid credentials
   test_scripts:
     estimated_total_duration_minutes: 25
     generated_at: '2026-06-26T14:38:17.456427+00:00'
@@ -5424,4 +5490,4 @@ pipeline_artifacts:
     - US-38
     tags: []
 schema_version: 1
-updated_at: '2026-06-26T14:38:17.528824+00:00'
+updated_at: '2026-06-26T14:40:18.219057+00:00'
