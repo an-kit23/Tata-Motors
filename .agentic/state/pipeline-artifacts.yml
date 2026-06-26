@@ -974,6 +974,432 @@ pipeline_artifacts:
         valid credentials to proceed.
       test_id: TC-038
       title: Create Case from portal Cases tab with contact association
+  - aborted: false
+    completed_at: '2026-06-26T13:19:50.418396+00:00'
+    defects:
+    - created_at: '2026-06-26T13:19:50.418419+00:00'
+      defect_id: DEF-037
+      error: 'Stopped after 2 consecutive failed attempts. Last issue: portal login
+        form fields not found on the page. Verify portal_url/portal_login_url.'
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-37
+      persona: Community User
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-037
+      title: Community portal login with username and password authentication
+    executed_by: Test Execution Agent — ankitkumarvkp@gmail.com.dev
+    execution_id: EXEC-79755675
+    org_url: https://login.salesforce.com
+    started_at: '2026-06-26T13:19:18.143397+00:00'
+    summary:
+      failed: 1
+      pass_rate: 0%
+      passed: 0
+      skipped: 0
+      total: 1
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 25.2
+      executor: mcp
+      failure_detail: 'Stopped after 2 consecutive failed attempts. Last issue: portal
+        login form fields not found on the page. Verify portal_url/portal_login_url.'
+      linked_story: US-37
+      persona: Community User
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
+      skipped: false
+      status: failed
+      step_results:
+      - action: navigate
+        detail: 'navigation failed — Page.goto: Protocol error (Page.navigate): Cannot
+          navigate to invalid URL'
+        elapsed_seconds: 6.8
+        purpose: Navigate to the community portal login URL
+        status: failed
+        step: 1
+        target: https://[community-domain].force.com/login
+      - action: portal_login
+        detail: portal login form fields not found on the page. Verify portal_url/portal_login_url.
+        elapsed_seconds: 25.1
+        purpose: Enter valid community user credentials and submit the login form
+        status: failed
+        step: 2
+        target: ''
+      steps_executed: 2
+      steps_passed: 0
+      summary: null
+      test_id: TC-037
+      title: Community portal login with username and password authentication
+  - aborted: false
+    completed_at: '2026-06-26T13:32:04.247572+00:00'
+    defects:
+    - created_at: '2026-06-26T13:32:04.247579+00:00'
+      defect_id: DEF-037
+      error: 'Stopped after 2 consecutive failed attempts. Last issue: no visible
+        element matches ''button:has-text("commtest1")'''
+      jira_key: ''
+      jira_pushed_at: ''
+      linked_story: US-37
+      persona: Community User
+      resolved_at: ''
+      screenshot_path: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
+      severity: Medium
+      status: open
+      story_title: ''
+      test_id: TC-037
+      title: Community portal login with username and password authentication
+    executed_by: Test Execution Agent — ankitkumarvkp@gmail.com.dev
+    execution_id: EXEC-e6cead99
+    org_url: https://login.salesforce.com
+    started_at: '2026-06-26T13:28:27.212269+00:00'
+    suite_id: SUITE-001
+    suite_name: Community Suite Execution
+    summary:
+      failed: 1
+      pass_rate: 50%
+      passed: 1
+      skipped: 0
+      total: 2
+    test_results:
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 63.4
+      executor: mcp
+      failure_detail: 'Stopped after 2 consecutive failed attempts. Last issue: no
+        visible element matches ''button:has-text("commtest1")'''
+      linked_story: US-37
+      persona: Community User
+      screenshot: /Users/ankit.kumar5/Documents/Agentic Engineering/data/screenshots/TC-037-failure.png
+      skipped: false
+      status: failed
+      step_results:
+      - action: verify_text
+        detail: 'Verified: ''Username'' is visible on the page'
+        elapsed_seconds: 6.2
+        purpose: Username
+        status: passed
+        step: 1
+        target: Username
+      - action: verify_text
+        detail: 'Verified: ''Password'' is visible on the page'
+        elapsed_seconds: 9.2
+        purpose: Password
+        status: passed
+        step: 2
+        target: Password
+      - action: portal_login
+        detail: could not locate the portal login form's username and password field(s)
+          on the page. This is a SELECTOR/DOM-locate miss (credentials ARE configured)
+          — the login form uses non-standard field markup. Snapshot the page and try
+          filling the visible Username/Password fields by their labels.
+        elapsed_seconds: 14.9
+        purpose: Enter valid community user credentials and submit the login form
+        status: failed
+        step: 3
+        target: ''
+      - action: fill
+        detail: "Typed 20 characters successfully\n\n--- Fresh page snapshot (taken\
+          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/login/\n\
+          page_title: Login\nelements:\n  e1: <input> 'Username'\n  e2: <input type='password'>\
+          \ 'Password'\n  e3: <button type='butt"
+        elapsed_seconds: 21.0
+        purpose: Fill username field
+        status: passed
+        step: 4
+        target: e1
+      - action: fill
+        detail: "Typed 15 characters successfully\n\n--- Fresh page snapshot (taken\
+          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/login/\n\
+          page_title: Login\nelements:\n  e1: <input> 'Username'\n  e2: <input type='password'>\
+          \ 'Password'\n  e3: <button type='butt"
+        elapsed_seconds: 24.9
+        purpose: Fill password field
+        status: passed
+        step: 5
+        target: e2
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/login/\n\
+          page_title: Login\nelements:\n  e1: <input> 'Username'\n  e2: <input type='password'>\
+          \ 'Password'\n  e3: <button type='button'> 'Log in"
+        elapsed_seconds: 28.1
+        purpose: Click login button to submit credentials
+        status: passed
+        step: 6
+        target: e3
+      - action: verify_text
+        detail: '''Invalid username or password'' was not visible on the page after
+          waiting. If this is a final assertion, take a fresh snapshot to re-check
+          or call finish — do NOT click or navigate to hunt for it.'
+        elapsed_seconds: 34.9
+        purpose: Invalid username or password
+        status: failed
+        step: 7
+        target: Invalid username or password
+      - action: verify_text
+        detail: 'Verified: ''error'' is visible on the page'
+        elapsed_seconds: 37.3
+        purpose: error
+        status: passed
+        step: 8
+        target: error
+      - action: portal_login
+        detail: 'Portal login submitted for ''community.commtest@anku2044-dev-ed.com''.
+          Current URL: https://anku2044-dev-ed.my.site.com/customer/secur/frontdoor.jsp?allp=1&appkp=1&apv=1&cshc=j0000012Se20000000nNEB&refURL=https%3A%2F%2Fanku2044-dev-ed.my.site.com%2Fcustomer%2Fsecur%2Ffrontdoor.jsp&retURL=%2Fcustomer%2'
+        elapsed_seconds: 45.5
+        purpose: Retry portal login with configured credentials
+        status: passed
+        step: 9
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''Home'' is visible on the page'
+        elapsed_seconds: 54.7
+        purpose: Home
+        status: passed
+        step: 10
+        target: Home
+      - action: verify_text
+        detail: '''Username'' was not visible on the page after waiting. If this is
+          a final assertion, take a fresh snapshot to re-check or call finish — do
+          NOT click or navigate to hunt for it.'
+        elapsed_seconds: 60.3
+        purpose: Username
+        status: failed
+        step: 11
+        target: Username
+      - action: assert_visible
+        detail: no visible element matches 'button:has-text("commtest1")'
+        elapsed_seconds: 63.3
+        purpose: ''
+        status: failed
+        step: 12
+        target: ''
+      steps_executed: 12
+      steps_passed: 8
+      summary: null
+      test_id: TC-037
+      title: Community portal login with username and password authentication
+    - aborted: false
+      browser_closed: false
+      duration_seconds: 140.3
+      executor: mcp
+      failure_detail: null
+      linked_story: US-38
+      persona: Community User
+      screenshot: null
+      skipped: false
+      status: passed
+      step_results:
+      - action: portal_login
+        detail: "Portal login submitted for 'community.commtest@anku2044-dev-ed.com'.\
+          \ Current URL: https://anku2044-dev-ed.my.site.com/customer/s/\n\n--- Fresh\
+          \ page snapshot (taken automatically because the page may have changed)\
+          \ ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/\npage_title:\
+          \ \nelements:\n  (n"
+        elapsed_seconds: 10.7
+        purpose: Log in as authenticated community user to access Cases tab
+        status: passed
+        step: 1
+        target: ''
+      - action: wait_for_selector
+        detail: '''nav, [role="navigation"], a:has-text("Cases"), button:has-text("Cases")''
+          did not appear within 6000ms. If the page already shows what you need, proceed
+          to the next step — the action tools auto-wait; do not keep waiting.'
+        elapsed_seconds: 23.8
+        purpose: Wait for portal navigation to load
+        status: failed
+        step: 2
+        target: ''
+      - action: navigate
+        detail: "Navigated to https://anku2044-dev-ed.my.site.com/customer/s/cases\n\
+          \n--- Fresh page snapshot (taken automatically because the page may have\
+          \ changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/cases\n\
+          page_title: Error\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Con"
+        elapsed_seconds: 31.2
+        purpose: Navigate directly to Cases tab in portal
+        status: passed
+        step: 3
+        target: /customer/s/cases
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Case List\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2:\
+          \ <a> 'Skip to Main Content'\n  e3: <combo"
+        elapsed_seconds: 36.1
+        purpose: Navigate to the Cases tab
+        status: passed
+        step: 4
+        target: e10
+      - action: wait_for_selector
+        detail: Element matching 'button:has-text("New"), a:has-text("New"), [title*="New"],
+          [title*="Create"]' became visible
+        elapsed_seconds: 43.4
+        purpose: Wait for New Case button to appear
+        status: passed
+        step: 5
+        target: ''
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e3: <combobox>"
+        elapsed_seconds: 49.9
+        purpose: Click the New Case button to start creating a new case
+        status: passed
+        step: 6
+        target: e7
+      - action: wait_for_selector
+        detail: Element matching 'input[name*="subject"], input[placeholder*="Subject"],
+          textarea[name*="description"], [role="dialog"], .modal' became visible
+        elapsed_seconds: 54.4
+        purpose: Wait for New Case form to appear
+        status: passed
+        step: 7
+        target: ''
+      - action: fill
+        detail: "Typed 34 characters successfully\n\n--- Fresh page snapshot (taken\
+          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e3"
+        elapsed_seconds: 61.6
+        purpose: Enter subject for the new case
+        status: passed
+        step: 8
+        target: e56
+      - action: fill
+        detail: "Typed 116 characters successfully\n\n--- Fresh page snapshot (taken\
+          \ automatically because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e"
+        elapsed_seconds: 66.2
+        purpose: Enter description for the case
+        status: passed
+        step: 9
+        target: e58
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e3: <combobox>"
+        elapsed_seconds: 71.3
+        purpose: Check contact association in Contact Name field
+        status: passed
+        step: 10
+        target: e47
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e3: <combobox>"
+        elapsed_seconds: 76.0
+        purpose: Select Community CommTest contact
+        status: passed
+        step: 11
+        target: e48
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e3: <combobox>"
+        elapsed_seconds: 81.6
+        purpose: Submit the new case by clicking the Save button
+        status: passed
+        step: 12
+        target: e66
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e3: <combobox>"
+        elapsed_seconds: 86.0
+        purpose: Check the error message to understand what went wrong
+        status: passed
+        step: 13
+        target: e63
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e3: <combobox>"
+        elapsed_seconds: 91.0
+        purpose: Open Case Origin field to set a value
+        status: passed
+        step: 14
+        target: e50
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e3: <combobox>"
+        elapsed_seconds: 95.7
+        purpose: Select Web as the Case Origin
+        status: passed
+        step: 15
+        target: e54
+      - action: click
+        detail: "Clicked successfully\n\n--- Fresh page snapshot (taken automatically\
+          \ because the page may have changed) ---\npage_url: https://anku2044-dev-ed.my.site.com/customer/s/case/Case/00B900000083GJGEA2\n\
+          page_title: Cases\nelements:\n  e1: <a> 'Skip to Navigation'\n  e2: <a>\
+          \ 'Skip to Main Content'\n  e3: <combobox>"
+        elapsed_seconds: 105.6
+        purpose: Submit the new case by clicking the Save button
+        status: passed
+        step: 16
+        target: e68
+      - action: wait_for_selector
+        detail: Element matching "button[name='SaveEdit']:not([disabled]), .toastMessage,
+          [title*='success'], [data-key='success']" became visible
+        elapsed_seconds: 110.5
+        purpose: Wait for save completion or success message
+        status: passed
+        step: 17
+        target: ''
+      - action: verify_text
+        detail: 'Verified: ''00001513'' is visible on the page'
+        elapsed_seconds: 121.1
+        purpose: '00001513'
+        status: passed
+        step: 18
+        target: '00001513'
+      - action: verify_text
+        detail: 'Verified: ''Community CommTest'' is visible on the page'
+        elapsed_seconds: 124.9
+        purpose: Community CommTest
+        status: passed
+        step: 19
+        target: Community CommTest
+      - action: verify_text
+        detail: 'Verified: ''Portal Test Case - Support Request'' is visible on the
+          page'
+        elapsed_seconds: 128.8
+        purpose: Portal Test Case - Support Request
+        status: passed
+        step: 20
+        target: Portal Test Case - Support Request
+      - action: verify_text
+        detail: 'Verified: ''This is a test case created from the community portal
+          to verify case creation fu'' is visible on the page'
+        elapsed_seconds: 132.2
+        purpose: This is a test case created from the community portal to verify case
+          creation functionality and contact association.
+        status: passed
+        step: 21
+        target: This is a test case created from the community portal to verify case
+          creation functionality and contact association.
+      steps_executed: 21
+      steps_passed: 20
+      summary: Successfully created a case from the portal Cases tab with proper contact
+        association. Case number 00001513 was generated and all fields were populated
+        correctly. The case is properly associated with 'Community CommTest' contact
+        as required.
+      test_id: TC-038
+      title: Create Case from portal Cases tab with contact association
   test_scripts:
     estimated_total_duration_minutes: 25
     generated_at: '2026-06-26T13:09:46.700142+00:00'
@@ -5224,4 +5650,4 @@ pipeline_artifacts:
     - US-38
     tags: []
 schema_version: 1
-updated_at: '2026-06-26T13:12:20.532381+00:00'
+updated_at: '2026-06-26T13:32:04.492822+00:00'
