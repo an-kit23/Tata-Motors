@@ -5122,5 +5122,14 @@ pipeline_artifacts:
         request is logged against the correct contact.
     test_suite: Generated test suite — 2 user stories
     total_tests: 38
+  test_suites:
+  - created_at: '2026-06-26T13:10:58.328953+00:00'
+    description: Only execute community related functionality
+    id: SUITE-001
+    name: Community Suite Execution
+    story_ids:
+    - US-37
+    - US-38
+    tags: []
 schema_version: 1
-updated_at: '2026-06-26T13:09:46.773041+00:00'
+updated_at: '2026-06-26T13:10:58.395288+00:00'
