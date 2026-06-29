@@ -839,6 +839,27 @@ pipeline_artifacts:
         it with the contact named 'Community CommTest', so that my support request
         is logged against the correct contact.
       type: story
+    - acceptance_criteria:
+      - A 'Forgot password' link is available on the login page
+      - Submitting a registered email sends a reset link
+      - The reset link lets the user set a new password and then log in
+      assignee: ''
+      derived: false
+      description: ''
+      epic_id: EP-06
+      id: US-39
+      labels: []
+      manually_edited: true
+      priority: medium
+      reporter: ''
+      source_doc: ''
+      source_excerpt: ''
+      sprint: ''
+      status: backlog
+      story_points: ''
+      title: As a community user, I want to reset my portal password, so that I can
+        regain access if I forget it.
+      type: story
   test_executions:
   - aborted: false
     completed_at: '2026-06-18T10:27:24.224304+00:00'
@@ -5590,4 +5611,4 @@ pipeline_artifacts:
     - US-38
     tags: []
 schema_version: 1
-updated_at: '2026-06-26T15:13:02.913781+00:00'
+updated_at: '2026-06-29T05:52:24.433570+00:00'

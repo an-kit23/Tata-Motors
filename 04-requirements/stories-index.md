@@ -40,7 +40,8 @@
 | US-36 | As the delivery team, I want to Define integration plan during Design phase | medium | backlog |
 | US-37 | As a community user, I want to log into the customer community portal with my username and password, so that I can access authenticated self-service features. | high | backlog |
 | US-38 | As a community user, I want to create a Case from the Cases tab and associate it with the contact named 'Community CommTest', so that my support request is logged against the correct contact. | high | backlog |
+| US-39 | As a community user, I want to reset my portal password, so that I can regain access if I forget it. | medium | backlog |
 
 
 ---
-_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories`. Last updated: 2026-06-26T15:13:03.047911+00:00._
+_Auto-generated from in-app state. Source field: `pipeline_artifacts.user_stories`. Last updated: 2026-06-29T05:52:24.538921+00:00._
